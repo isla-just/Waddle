@@ -7,27 +7,23 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0492AA8628DC5FBE0086137C /* WaddleApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0492AA8528DC5FBE0086137C /* WaddleApp.swift */; };
-		0492AA8828DC5FBE0086137C /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0492AA8728DC5FBE0086137C /* Persistence.swift */; };
-		0492AA8B28DC5FBE0086137C /* Waddle.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 0492AA8928DC5FBE0086137C /* Waddle.xcdatamodeld */; };
-		0492AA8D28DC5FBE0086137C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0492AA8C28DC5FBE0086137C /* ContentView.swift */; };
-		0492AA8F28DC5FBF0086137C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0492AA8E28DC5FBF0086137C /* Assets.xcassets */; };
-		0492AA9328DC5FBF0086137C /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0492AA9228DC5FBF0086137C /* Preview Assets.xcassets */; };
+		04E8978A28ED893000A23106 /* WaddleApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E8978928ED893000A23106 /* WaddleApp.swift */; };
+		04E8978C28ED893000A23106 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E8978B28ED893000A23106 /* ContentView.swift */; };
+		04E8978E28ED893100A23106 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04E8978D28ED893100A23106 /* Assets.xcassets */; };
+		04E8979228ED893100A23106 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04E8979128ED893100A23106 /* Preview Assets.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		0492AA8228DC5FBE0086137C /* Waddle.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Waddle.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		0492AA8528DC5FBE0086137C /* WaddleApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaddleApp.swift; sourceTree = "<group>"; };
-		0492AA8728DC5FBE0086137C /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
-		0492AA8A28DC5FBE0086137C /* Waddle.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Waddle.xcdatamodel; sourceTree = "<group>"; };
-		0492AA8C28DC5FBE0086137C /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		0492AA8E28DC5FBF0086137C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		0492AA9028DC5FBF0086137C /* Waddle.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Waddle.entitlements; sourceTree = "<group>"; };
-		0492AA9228DC5FBF0086137C /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		04E8978628ED893000A23106 /* Waddle.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Waddle.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		04E8978928ED893000A23106 /* WaddleApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaddleApp.swift; sourceTree = "<group>"; };
+		04E8978B28ED893000A23106 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		04E8978D28ED893100A23106 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		04E8978F28ED893100A23106 /* Waddle.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Waddle.entitlements; sourceTree = "<group>"; };
+		04E8979128ED893100A23106 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		0492AA7F28DC5FBE0086137C /* Frameworks */ = {
+		04E8978328ED893000A23106 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -37,40 +33,38 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		0492AA7928DC5FBE0086137C = {
+		04E8977D28ED893000A23106 = {
 			isa = PBXGroup;
 			children = (
-				0492AA8428DC5FBE0086137C /* Waddle */,
-				0492AA8328DC5FBE0086137C /* Products */,
+				04E8978828ED893000A23106 /* Waddle */,
+				04E8978728ED893000A23106 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		0492AA8328DC5FBE0086137C /* Products */ = {
+		04E8978728ED893000A23106 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				0492AA8228DC5FBE0086137C /* Waddle.app */,
+				04E8978628ED893000A23106 /* Waddle.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		0492AA8428DC5FBE0086137C /* Waddle */ = {
+		04E8978828ED893000A23106 /* Waddle */ = {
 			isa = PBXGroup;
 			children = (
-				0492AA8528DC5FBE0086137C /* WaddleApp.swift */,
-				0492AA8728DC5FBE0086137C /* Persistence.swift */,
-				0492AA8C28DC5FBE0086137C /* ContentView.swift */,
-				0492AA8E28DC5FBF0086137C /* Assets.xcassets */,
-				0492AA9028DC5FBF0086137C /* Waddle.entitlements */,
-				0492AA8928DC5FBE0086137C /* Waddle.xcdatamodeld */,
-				0492AA9128DC5FBF0086137C /* Preview Content */,
+				04E8978928ED893000A23106 /* WaddleApp.swift */,
+				04E8978B28ED893000A23106 /* ContentView.swift */,
+				04E8978D28ED893100A23106 /* Assets.xcassets */,
+				04E8978F28ED893100A23106 /* Waddle.entitlements */,
+				04E8979028ED893100A23106 /* Preview Content */,
 			);
 			path = Waddle;
 			sourceTree = "<group>";
 		};
-		0492AA9128DC5FBF0086137C /* Preview Content */ = {
+		04E8979028ED893100A23106 /* Preview Content */ = {
 			isa = PBXGroup;
 			children = (
-				0492AA9228DC5FBF0086137C /* Preview Assets.xcassets */,
+				04E8979128ED893100A23106 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
 			sourceTree = "<group>";
@@ -78,13 +72,13 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		0492AA8128DC5FBE0086137C /* Waddle */ = {
+		04E8978528ED893000A23106 /* Waddle */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 0492AA9628DC5FBF0086137C /* Build configuration list for PBXNativeTarget "Waddle" */;
+			buildConfigurationList = 04E8979528ED893100A23106 /* Build configuration list for PBXNativeTarget "Waddle" */;
 			buildPhases = (
-				0492AA7E28DC5FBE0086137C /* Sources */,
-				0492AA7F28DC5FBE0086137C /* Frameworks */,
-				0492AA8028DC5FBE0086137C /* Resources */,
+				04E8978228ED893000A23106 /* Sources */,
+				04E8978328ED893000A23106 /* Frameworks */,
+				04E8978428ED893000A23106 /* Resources */,
 			);
 			buildRules = (
 			);
@@ -92,25 +86,25 @@
 			);
 			name = Waddle;
 			productName = Waddle;
-			productReference = 0492AA8228DC5FBE0086137C /* Waddle.app */;
+			productReference = 04E8978628ED893000A23106 /* Waddle.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		0492AA7A28DC5FBE0086137C /* Project object */ = {
+		04E8977E28ED893000A23106 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1400;
 				LastUpgradeCheck = 1400;
 				TargetAttributes = {
-					0492AA8128DC5FBE0086137C = {
-						CreatedOnToolsVersion = 14.0;
+					04E8978528ED893000A23106 = {
+						CreatedOnToolsVersion = 14.0.1;
 					};
 				};
 			};
-			buildConfigurationList = 0492AA7D28DC5FBE0086137C /* Build configuration list for PBXProject "Waddle" */;
+			buildConfigurationList = 04E8978128ED893000A23106 /* Build configuration list for PBXProject "Waddle" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -118,44 +112,42 @@
 				en,
 				Base,
 			);
-			mainGroup = 0492AA7928DC5FBE0086137C;
-			productRefGroup = 0492AA8328DC5FBE0086137C /* Products */;
+			mainGroup = 04E8977D28ED893000A23106;
+			productRefGroup = 04E8978728ED893000A23106 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				0492AA8128DC5FBE0086137C /* Waddle */,
+				04E8978528ED893000A23106 /* Waddle */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		0492AA8028DC5FBE0086137C /* Resources */ = {
+		04E8978428ED893000A23106 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0492AA9328DC5FBF0086137C /* Preview Assets.xcassets in Resources */,
-				0492AA8F28DC5FBF0086137C /* Assets.xcassets in Resources */,
+				04E8979228ED893100A23106 /* Preview Assets.xcassets in Resources */,
+				04E8978E28ED893100A23106 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		0492AA7E28DC5FBE0086137C /* Sources */ = {
+		04E8978228ED893000A23106 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0492AA8628DC5FBE0086137C /* WaddleApp.swift in Sources */,
-				0492AA8B28DC5FBE0086137C /* Waddle.xcdatamodeld in Sources */,
-				0492AA8D28DC5FBE0086137C /* ContentView.swift in Sources */,
-				0492AA8828DC5FBE0086137C /* Persistence.swift in Sources */,
+				04E8978C28ED893000A23106 /* ContentView.swift in Sources */,
+				04E8978A28ED893000A23106 /* WaddleApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
-		0492AA9428DC5FBF0086137C /* Debug */ = {
+		04E8979328ED893100A23106 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -213,7 +205,7 @@
 			};
 			name = Debug;
 		};
-		0492AA9528DC5FBF0086137C /* Release */ = {
+		04E8979428ED893100A23106 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -264,7 +256,7 @@
 			};
 			name = Release;
 		};
-		0492AA9728DC5FBF0086137C /* Debug */ = {
+		04E8979628ED893100A23106 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -302,7 +294,7 @@
 			};
 			name = Debug;
 		};
-		0492AA9828DC5FBF0086137C /* Release */ = {
+		04E8979728ED893100A23106 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -343,38 +335,25 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		0492AA7D28DC5FBE0086137C /* Build configuration list for PBXProject "Waddle" */ = {
+		04E8978128ED893000A23106 /* Build configuration list for PBXProject "Waddle" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				0492AA9428DC5FBF0086137C /* Debug */,
-				0492AA9528DC5FBF0086137C /* Release */,
+				04E8979328ED893100A23106 /* Debug */,
+				04E8979428ED893100A23106 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		0492AA9628DC5FBF0086137C /* Build configuration list for PBXNativeTarget "Waddle" */ = {
+		04E8979528ED893100A23106 /* Build configuration list for PBXNativeTarget "Waddle" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				0492AA9728DC5FBF0086137C /* Debug */,
-				0492AA9828DC5FBF0086137C /* Release */,
+				04E8979628ED893100A23106 /* Debug */,
+				04E8979728ED893100A23106 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCVersionGroup section */
-		0492AA8928DC5FBE0086137C /* Waddle.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				0492AA8A28DC5FBE0086137C /* Waddle.xcdatamodel */,
-			);
-			currentVersion = 0492AA8A28DC5FBE0086137C /* Waddle.xcdatamodel */;
-			path = Waddle.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
-/* End XCVersionGroup section */
 	};
-	rootObject = 0492AA7A28DC5FBE0086137C /* Project object */;
+	rootObject = 04E8977E28ED893000A23106 /* Project object */;
 }
