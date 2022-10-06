@@ -11,6 +11,13 @@
 		04E8978C28ED893000A23106 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E8978B28ED893000A23106 /* ContentView.swift */; };
 		04E8978E28ED893100A23106 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04E8978D28ED893100A23106 /* Assets.xcassets */; };
 		04E8979228ED893100A23106 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04E8979128ED893100A23106 /* Preview Assets.xcassets */; };
+		04E8979928EDCC0800A23106 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04E8979828EDCC0800A23106 /* Launch Screen.storyboard */; };
+		04E8979C28EE06DA00A23106 /* ConcentricOnboarding in Frameworks */ = {isa = PBXBuildFile; productRef = 04E8979B28EE06DA00A23106 /* ConcentricOnboarding */; };
+		04E897A128EE0AAB00A23106 /* MockData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E897A028EE0AAB00A23106 /* MockData.swift */; };
+		04E897A328EE0ADB00A23106 /* PageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E897A228EE0ADB00A23106 /* PageView.swift */; };
+		04E897A628EEE5E800A23106 /* Login.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E897A528EEE5E800A23106 /* Login.swift */; };
+		04E897A828EEE7A600A23106 /* Signup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E897A728EEE7A600A23106 /* Signup.swift */; };
+		04E897AA28EEEADE00A23106 /* Dashboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E897A928EEEADE00A23106 /* Dashboard.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +27,12 @@
 		04E8978D28ED893100A23106 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		04E8978F28ED893100A23106 /* Waddle.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Waddle.entitlements; sourceTree = "<group>"; };
 		04E8979128ED893100A23106 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		04E8979828EDCC0800A23106 /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
+		04E897A028EE0AAB00A23106 /* MockData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockData.swift; sourceTree = "<group>"; };
+		04E897A228EE0ADB00A23106 /* PageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageView.swift; sourceTree = "<group>"; };
+		04E897A528EEE5E800A23106 /* Login.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Login.swift; sourceTree = "<group>"; };
+		04E897A728EEE7A600A23106 /* Signup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Signup.swift; sourceTree = "<group>"; };
+		04E897A928EEEADE00A23106 /* Dashboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dashboard.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -27,6 +40,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				04E8979C28EE06DA00A23106 /* ConcentricOnboarding in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -36,6 +50,7 @@
 		04E8977D28ED893000A23106 = {
 			isa = PBXGroup;
 			children = (
+				04E8979828EDCC0800A23106 /* Launch Screen.storyboard */,
 				04E8978828ED893000A23106 /* Waddle */,
 				04E8978728ED893000A23106 /* Products */,
 			);
@@ -52,11 +67,14 @@
 		04E8978828ED893000A23106 /* Waddle */ = {
 			isa = PBXGroup;
 			children = (
+				04E897A428EEE5DD00A23106 /* Views */,
 				04E8978928ED893000A23106 /* WaddleApp.swift */,
 				04E8978B28ED893000A23106 /* ContentView.swift */,
 				04E8978D28ED893100A23106 /* Assets.xcassets */,
 				04E8978F28ED893100A23106 /* Waddle.entitlements */,
 				04E8979028ED893100A23106 /* Preview Content */,
+				04E897A028EE0AAB00A23106 /* MockData.swift */,
+				04E897A228EE0ADB00A23106 /* PageView.swift */,
 			);
 			path = Waddle;
 			sourceTree = "<group>";
@@ -67,6 +85,16 @@
 				04E8979128ED893100A23106 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		04E897A428EEE5DD00A23106 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				04E897A528EEE5E800A23106 /* Login.swift */,
+				04E897A728EEE7A600A23106 /* Signup.swift */,
+				04E897A928EEEADE00A23106 /* Dashboard.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -85,6 +113,9 @@
 			dependencies = (
 			);
 			name = Waddle;
+			packageProductDependencies = (
+				04E8979B28EE06DA00A23106 /* ConcentricOnboarding */,
+			);
 			productName = Waddle;
 			productReference = 04E8978628ED893000A23106 /* Waddle.app */;
 			productType = "com.apple.product-type.application";
@@ -113,6 +144,9 @@
 				Base,
 			);
 			mainGroup = 04E8977D28ED893000A23106;
+			packageReferences = (
+				04E8979A28EE06DA00A23106 /* XCRemoteSwiftPackageReference "ConcentricOnboarding" */,
+			);
 			productRefGroup = 04E8978728ED893000A23106 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -127,6 +161,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				04E8979928EDCC0800A23106 /* Launch Screen.storyboard in Resources */,
 				04E8979228ED893100A23106 /* Preview Assets.xcassets in Resources */,
 				04E8978E28ED893100A23106 /* Assets.xcassets in Resources */,
 			);
@@ -139,8 +174,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				04E897A128EE0AAB00A23106 /* MockData.swift in Sources */,
+				04E897A628EEE5E800A23106 /* Login.swift in Sources */,
+				04E897A328EE0ADB00A23106 /* PageView.swift in Sources */,
 				04E8978C28ED893000A23106 /* ContentView.swift in Sources */,
+				04E897AA28EEEADE00A23106 /* Dashboard.swift in Sources */,
 				04E8978A28ED893000A23106 /* WaddleApp.swift in Sources */,
+				04E897A828EEE7A600A23106 /* Signup.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -275,6 +315,7 @@
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = "Launch Screen.storyboard";
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -313,6 +354,7 @@
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = "Launch Screen.storyboard";
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -354,6 +396,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		04E8979A28EE06DA00A23106 /* XCRemoteSwiftPackageReference "ConcentricOnboarding" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/exyte/ConcentricOnboarding";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		04E8979B28EE06DA00A23106 /* ConcentricOnboarding */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 04E8979A28EE06DA00A23106 /* XCRemoteSwiftPackageReference "ConcentricOnboarding" */;
+			productName = ConcentricOnboarding;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 04E8977E28ED893000A23106 /* Project object */;
 }
