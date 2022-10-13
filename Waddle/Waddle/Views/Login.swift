@@ -10,7 +10,7 @@ import SwiftUI
 struct Login: View {
     
     
-    @State var username: String = ""
+    @State var email: String = ""
     @State var password: String = ""
     
     var body: some View {
@@ -37,7 +37,7 @@ struct Login: View {
                     
                     HStack {
                             VStack {
-                                 TextField("username", text: $username)
+                                 TextField("email", text: $email)
                                       .padding(.leading, 16)
                                       .padding(.trailing, 16)
                                       .foregroundColor(Color("Dark2"))

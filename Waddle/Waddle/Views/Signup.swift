@@ -36,7 +36,7 @@ struct Signup: View {
                     
                     HStack {
                             VStack {
-                                 TextField("username", text: $username)
+                                 TextField("family name", text: $username)
                                       .padding(.leading, 16)
                                       .padding(.trailing, 16)
                                       .foregroundColor(Color("Dark2"))
@@ -79,7 +79,7 @@ struct Signup: View {
                     
                     
                 
-                    NavigationLink(destination: Dashboard()){
+                    NavigationLink(destination: WatchLink()){
                       
                     ZStack{
                         RoundedRectangle(cornerRadius: 25, style: .continuous)
@@ -99,7 +99,7 @@ struct Signup: View {
                             .font(.system(size: 15, weight: .medium))
                             .multilineTextAlignment(.center).foregroundColor(Color("Dark2"))
                         
-                        NavigationLink(destination: Signup()){
+                        NavigationLink(destination: Login()){
                         Text("Sign in")
                             .font(.system(size: 15, weight: .semibold))
                             .multilineTextAlignment(.center).foregroundColor(Color("Dark"))
