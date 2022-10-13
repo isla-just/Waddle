@@ -70,17 +70,18 @@ struct Memory: View {
                             .padding(.horizontal, 0).padding(.top, 20)
                     }.padding(.top, 210)
                     
-
-                    ZStack{
-                        RoundedRectangle(cornerRadius: 25, style: .continuous)
-                            .fill(Color("Dark2"))
-                            .frame(width: .infinity, height: 60)
-                            .padding(.horizontal, 50).padding(.top, 20)
-
-                        Text("Back home")
-                            .font(.system(size: 18, weight: .semibold))
-                            .multilineTextAlignment(.center).foregroundColor(.white)
-                            .padding(.horizontal, 0).padding(.top, 20)
+                    NavigationLink(destination: Dashboard()){
+                        ZStack{
+                            RoundedRectangle(cornerRadius: 25, style: .continuous)
+                                .fill(Color("Dark2"))
+                                .frame(width: .infinity, height: 60)
+                                .padding(.horizontal, 50).padding(.top, 20)
+                            
+                            Text("Back home")
+                                .font(.system(size: 18, weight: .semibold))
+                                .multilineTextAlignment(.center).foregroundColor(.white)
+                                .padding(.horizontal, 0).padding(.top, 20)
+                        }
                     }
                  
                     
@@ -96,23 +97,25 @@ struct Memory: View {
 
                     HStack{
 
-                        VStack{
-                            Text("home")
-                               
-                                .font(.system(size: 20, weight: .regular))
-                                .multilineTextAlignment(.center).foregroundColor(.white)
-                        }.padding(.top, -20).padding()
+                        NavigationLink(destination: Dashboard()){
+                            VStack{
+                                Text("home")
+                                
+                                    .font(.system(size: 20, weight: .regular))
+                                    .multilineTextAlignment(.center).foregroundColor(.white)
+                            }.padding(.top, -20).padding()
+                        }
 
-                        NavigationLink(destination: WatchLink()){
+                    
                         VStack{
                             Text("memories")
                                 .underline(color: Color("Dark2"))
                                 .font(.system(size: 20, weight: .semibold))
                                 .multilineTextAlignment(.center).foregroundColor(.white)
                         }.padding(.top, -20).padding()
-                        }
+                 
 
-                        NavigationLink(destination: WatchLink()){
+                        NavigationLink(destination: Add()){
                             VStack{
                                 Text("add")
                                     .font(.system(size: 20, weight: .regular))

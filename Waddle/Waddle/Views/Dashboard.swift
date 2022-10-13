@@ -222,19 +222,21 @@ struct Dashboard: View {
                             )
                         ).padding(.top, 5)
                     
-                    ZStack{
-                        RoundedRectangle(cornerRadius: 25, style: .continuous)
-                            .fill(Color("Dark"))
-                            .frame(width: .infinity, height: 60)
-                            .padding(.horizontal, 50).padding(.top, 20)
-
-                        Text("Log out")
-                            .font(.system(size: 18, weight: .semibold))
-                            .multilineTextAlignment(.center).foregroundColor(.white)
-                            .padding(.horizontal, 50).padding(.top, 20)
+                    NavigationLink(destination: Login()){
+                        
+                        ZStack{
+                            RoundedRectangle(cornerRadius: 25, style: .continuous)
+                                .fill(Color("Dark"))
+                                .frame(width: .infinity, height: 60)
+                                .padding(.horizontal, 50).padding(.top, 20)
+                            
+                            Text("Log out")
+                                .font(.system(size: 18, weight: .semibold))
+                                .multilineTextAlignment(.center).foregroundColor(.white)
+                                .padding(.horizontal, 50).padding(.top, 20)
+                        }.padding(.bottom, 120)
+                        
                     }
-                 
-                    
                    
                    
                 }
@@ -254,7 +256,7 @@ struct Dashboard: View {
                                 .multilineTextAlignment(.center).foregroundColor(.white)
                         }.padding(.top, -20).padding()
 
-                        NavigationLink(destination: WatchLink()){
+                        NavigationLink(destination: Memories()){
                         VStack{
                             Text("memories")
                                 .font(.system(size: 20, weight: .regular))
@@ -262,7 +264,7 @@ struct Dashboard: View {
                         }.padding(.top, -20).padding()
                         }
 
-                        NavigationLink(destination: WatchLink()){
+                        NavigationLink(destination: Add()){
                             VStack{
                                 Text("add")
                                     .font(.system(size: 20, weight: .regular))

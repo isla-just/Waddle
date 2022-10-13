@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		04688BA228F808DD00A416A2 /* Memory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04688BA128F808DD00A416A2 /* Memory.swift */; };
 		04688BA428F80BA000A416A2 /* Add.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04688BA328F80BA000A416A2 /* Add.swift */; };
+		04688BA628F8107300A416A2 /* Memories.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04688BA528F8107300A416A2 /* Memories.swift */; };
 		04E8978A28ED893000A23106 /* WaddleApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E8978928ED893000A23106 /* WaddleApp.swift */; };
 		04E8978C28ED893000A23106 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E8978B28ED893000A23106 /* ContentView.swift */; };
 		04E8978E28ED893100A23106 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04E8978D28ED893100A23106 /* Assets.xcassets */; };
@@ -27,6 +28,7 @@
 /* Begin PBXFileReference section */
 		04688BA128F808DD00A416A2 /* Memory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Memory.swift; sourceTree = "<group>"; };
 		04688BA328F80BA000A416A2 /* Add.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Add.swift; sourceTree = "<group>"; };
+		04688BA528F8107300A416A2 /* Memories.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Memories.swift; sourceTree = "<group>"; };
 		04E8978628ED893000A23106 /* Waddle.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Waddle.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		04E8978928ED893000A23106 /* WaddleApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaddleApp.swift; sourceTree = "<group>"; };
 		04E8978B28ED893000A23106 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -105,6 +107,7 @@
 				04E897AD28EEF61400A23106 /* Setup.swift */,
 				04688BA128F808DD00A416A2 /* Memory.swift */,
 				04688BA328F80BA000A416A2 /* Add.swift */,
+				04688BA528F8107300A416A2 /* Memories.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -196,6 +199,7 @@
 				04E897A828EEE7A600A23106 /* Signup.swift in Sources */,
 				04E897AE28EEF61400A23106 /* Setup.swift in Sources */,
 				04688BA228F808DD00A416A2 /* Memory.swift in Sources */,
+				04688BA628F8107300A416A2 /* Memories.swift in Sources */,
 				04E897AC28EEEF9100A23106 /* WatchLink.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
