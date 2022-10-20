@@ -1,0 +1,519 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		040135A22900746F00935CF0 /* Waddle2App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040135A12900746F00935CF0 /* Waddle2App.swift */; };
+		040135A42900746F00935CF0 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040135A32900746F00935CF0 /* ContentView.swift */; };
+		040135A62900747000935CF0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 040135A52900747000935CF0 /* Assets.xcassets */; };
+		040135AA2900747000935CF0 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 040135A92900747000935CF0 /* Preview Assets.xcassets */; };
+		040135B1290074A300935CF0 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 040135B0290074A300935CF0 /* Launch Screen.storyboard */; };
+		040135B62900760A00935CF0 /* FirestoreManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040135B52900760A00935CF0 /* FirestoreManager.swift */; };
+		040135B82900761400935CF0 /* MotionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040135B72900761400935CF0 /* MotionManager.swift */; };
+		040135BB290077E500935CF0 /* ConcentricOnboarding in Frameworks */ = {isa = PBXBuildFile; productRef = 040135BA290077E500935CF0 /* ConcentricOnboarding */; };
+		040135C12900793400935CF0 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 040135C02900793400935CF0 /* FirebaseAuth */; };
+		040135C32900793400935CF0 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 040135C22900793400935CF0 /* FirebaseFirestore */; };
+		040135C52900793400935CF0 /* FirebaseFirestoreSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 040135C42900793400935CF0 /* FirebaseFirestoreSwift */; };
+		040135C829007AD000935CF0 /* PageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040135C629007AD000935CF0 /* PageView.swift */; };
+		040135C929007AD000935CF0 /* MockData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040135C729007AD000935CF0 /* MockData.swift */; };
+		040135CB29007B7B00935CF0 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 040135CA29007B7B00935CF0 /* GoogleService-Info.plist */; };
+		04C605A129007D2C005F5B77 /* Add.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C605A029007D2C005F5B77 /* Add.swift */; };
+		04C605A329007D57005F5B77 /* Dashboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C605A229007D57005F5B77 /* Dashboard.swift */; };
+		04C605A529007D8D005F5B77 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C605A429007D8D005F5B77 /* ImagePicker.swift */; };
+		04C605A729007DA3005F5B77 /* Login.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C605A629007DA3005F5B77 /* Login.swift */; };
+		04C605A929007DC1005F5B77 /* Memories.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C605A829007DC1005F5B77 /* Memories.swift */; };
+		04C605AB29007DD6005F5B77 /* Memory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C605AA29007DD6005F5B77 /* Memory.swift */; };
+		04C605AD29007DED005F5B77 /* Setup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C605AC29007DED005F5B77 /* Setup.swift */; };
+		04C605AF29007DFE005F5B77 /* Signup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C605AE29007DFE005F5B77 /* Signup.swift */; };
+		04C605B129007E1C005F5B77 /* WatchLink.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C605B029007E1C005F5B77 /* WatchLink.swift */; };
+		04C605B329007E65005F5B77 /* HealthStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C605B229007E65005F5B77 /* HealthStore.swift */; };
+		04C605B729008767005F5B77 /* Step.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C605B629008767005F5B77 /* Step.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		0401359E2900746F00935CF0 /* Waddle2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Waddle2.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		040135A12900746F00935CF0 /* Waddle2App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Waddle2App.swift; sourceTree = "<group>"; };
+		040135A32900746F00935CF0 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		040135A52900747000935CF0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		040135A72900747000935CF0 /* Waddle2.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Waddle2.entitlements; sourceTree = "<group>"; };
+		040135A92900747000935CF0 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		040135B0290074A300935CF0 /* Launch Screen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = "Launch Screen.storyboard"; path = "../Waddle/Launch Screen.storyboard"; sourceTree = "<group>"; };
+		040135B52900760A00935CF0 /* FirestoreManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FirestoreManager.swift; path = ../../../../../../.Trash/FirestoreManager.swift; sourceTree = "<group>"; };
+		040135B72900761400935CF0 /* MotionManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MotionManager.swift; path = ../../../../../../.Trash/MotionManager.swift; sourceTree = "<group>"; };
+		040135C629007AD000935CF0 /* PageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PageView.swift; path = ../../Waddle/Waddle/PageView.swift; sourceTree = "<group>"; };
+		040135C729007AD000935CF0 /* MockData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MockData.swift; path = ../../Waddle/Waddle/MockData.swift; sourceTree = "<group>"; };
+		040135CA29007B7B00935CF0 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../../Desktop/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		04C605A029007D2C005F5B77 /* Add.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Add.swift; sourceTree = "<group>"; };
+		04C605A229007D57005F5B77 /* Dashboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dashboard.swift; sourceTree = "<group>"; };
+		04C605A429007D8D005F5B77 /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
+		04C605A629007DA3005F5B77 /* Login.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Login.swift; sourceTree = "<group>"; };
+		04C605A829007DC1005F5B77 /* Memories.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Memories.swift; sourceTree = "<group>"; };
+		04C605AA29007DD6005F5B77 /* Memory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Memory.swift; sourceTree = "<group>"; };
+		04C605AC29007DED005F5B77 /* Setup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Setup.swift; sourceTree = "<group>"; };
+		04C605AE29007DFE005F5B77 /* Signup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Signup.swift; sourceTree = "<group>"; };
+		04C605B029007E1C005F5B77 /* WatchLink.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchLink.swift; sourceTree = "<group>"; };
+		04C605B229007E65005F5B77 /* HealthStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthStore.swift; sourceTree = "<group>"; };
+		04C605B429008040005F5B77 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		04C605B629008767005F5B77 /* Step.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Step.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		0401359B2900746F00935CF0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				040135BB290077E500935CF0 /* ConcentricOnboarding in Frameworks */,
+				040135C12900793400935CF0 /* FirebaseAuth in Frameworks */,
+				040135C32900793400935CF0 /* FirebaseFirestore in Frameworks */,
+				040135C52900793400935CF0 /* FirebaseFirestoreSwift in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		040135952900746F00935CF0 = {
+			isa = PBXGroup;
+			children = (
+				040135B0290074A300935CF0 /* Launch Screen.storyboard */,
+				040135A02900746F00935CF0 /* Waddle2 */,
+				0401359F2900746F00935CF0 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		0401359F2900746F00935CF0 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				0401359E2900746F00935CF0 /* Waddle2.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		040135A02900746F00935CF0 /* Waddle2 */ = {
+			isa = PBXGroup;
+			children = (
+				04C605B529008742005F5B77 /* Models */,
+				04C605B429008040005F5B77 /* Info.plist */,
+				04C6059F29007D0F005F5B77 /* Views */,
+				040135CA29007B7B00935CF0 /* GoogleService-Info.plist */,
+				040135B4290075FD00935CF0 /* Services */,
+				040135A12900746F00935CF0 /* Waddle2App.swift */,
+				040135A32900746F00935CF0 /* ContentView.swift */,
+				040135C729007AD000935CF0 /* MockData.swift */,
+				040135C629007AD000935CF0 /* PageView.swift */,
+				040135A52900747000935CF0 /* Assets.xcassets */,
+				040135A72900747000935CF0 /* Waddle2.entitlements */,
+				040135A82900747000935CF0 /* Preview Content */,
+			);
+			path = Waddle2;
+			sourceTree = "<group>";
+		};
+		040135A82900747000935CF0 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				040135A92900747000935CF0 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		040135B4290075FD00935CF0 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				040135B52900760A00935CF0 /* FirestoreManager.swift */,
+				040135B72900761400935CF0 /* MotionManager.swift */,
+				04C605B229007E65005F5B77 /* HealthStore.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		04C6059F29007D0F005F5B77 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				04C605A029007D2C005F5B77 /* Add.swift */,
+				04C605A229007D57005F5B77 /* Dashboard.swift */,
+				04C605A429007D8D005F5B77 /* ImagePicker.swift */,
+				04C605A629007DA3005F5B77 /* Login.swift */,
+				04C605A829007DC1005F5B77 /* Memories.swift */,
+				04C605AA29007DD6005F5B77 /* Memory.swift */,
+				04C605AC29007DED005F5B77 /* Setup.swift */,
+				04C605AE29007DFE005F5B77 /* Signup.swift */,
+				04C605B029007E1C005F5B77 /* WatchLink.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		04C605B529008742005F5B77 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				04C605B629008767005F5B77 /* Step.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		0401359D2900746F00935CF0 /* Waddle2 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 040135AD2900747000935CF0 /* Build configuration list for PBXNativeTarget "Waddle2" */;
+			buildPhases = (
+				0401359A2900746F00935CF0 /* Sources */,
+				0401359B2900746F00935CF0 /* Frameworks */,
+				0401359C2900746F00935CF0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Waddle2;
+			packageProductDependencies = (
+				040135BA290077E500935CF0 /* ConcentricOnboarding */,
+				040135C02900793400935CF0 /* FirebaseAuth */,
+				040135C22900793400935CF0 /* FirebaseFirestore */,
+				040135C42900793400935CF0 /* FirebaseFirestoreSwift */,
+			);
+			productName = Waddle2;
+			productReference = 0401359E2900746F00935CF0 /* Waddle2.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		040135962900746F00935CF0 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1400;
+				LastUpgradeCheck = 1400;
+				TargetAttributes = {
+					0401359D2900746F00935CF0 = {
+						CreatedOnToolsVersion = 14.0.1;
+					};
+				};
+			};
+			buildConfigurationList = 040135992900746F00935CF0 /* Build configuration list for PBXProject "Waddle2" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 040135952900746F00935CF0;
+			packageReferences = (
+				040135B9290077E500935CF0 /* XCRemoteSwiftPackageReference "ConcentricOnboarding" */,
+				040135BF2900793400935CF0 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+			);
+			productRefGroup = 0401359F2900746F00935CF0 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				0401359D2900746F00935CF0 /* Waddle2 */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		0401359C2900746F00935CF0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				040135B1290074A300935CF0 /* Launch Screen.storyboard in Resources */,
+				040135AA2900747000935CF0 /* Preview Assets.xcassets in Resources */,
+				040135A62900747000935CF0 /* Assets.xcassets in Resources */,
+				040135CB29007B7B00935CF0 /* GoogleService-Info.plist in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		0401359A2900746F00935CF0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				04C605AB29007DD6005F5B77 /* Memory.swift in Sources */,
+				040135C829007AD000935CF0 /* PageView.swift in Sources */,
+				04C605B729008767005F5B77 /* Step.swift in Sources */,
+				04C605B129007E1C005F5B77 /* WatchLink.swift in Sources */,
+				04C605A729007DA3005F5B77 /* Login.swift in Sources */,
+				040135C929007AD000935CF0 /* MockData.swift in Sources */,
+				04C605A329007D57005F5B77 /* Dashboard.swift in Sources */,
+				04C605A529007D8D005F5B77 /* ImagePicker.swift in Sources */,
+				04C605A129007D2C005F5B77 /* Add.swift in Sources */,
+				04C605AF29007DFE005F5B77 /* Signup.swift in Sources */,
+				040135A42900746F00935CF0 /* ContentView.swift in Sources */,
+				040135B62900760A00935CF0 /* FirestoreManager.swift in Sources */,
+				04C605A929007DC1005F5B77 /* Memories.swift in Sources */,
+				04C605AD29007DED005F5B77 /* Setup.swift in Sources */,
+				040135A22900746F00935CF0 /* Waddle2App.swift in Sources */,
+				040135B82900761400935CF0 /* MotionManager.swift in Sources */,
+				04C605B329007E65005F5B77 /* HealthStore.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		040135AB2900747000935CF0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		040135AC2900747000935CF0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+			};
+			name = Release;
+		};
+		040135AE2900747000935CF0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Waddle2/Waddle2.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Waddle2/Preview Content\"";
+				DEVELOPMENT_TEAM = GV58N5RQL6;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Waddle2/Info.plist;
+				INFOPLIST_KEY_NSHealthShareUsageDescription = "This app requires data about your steps";
+				INFOPLIST_KEY_NSHealthUpdateUsageDescription = "This app needs your helth data";
+				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
+				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
+				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 12.3;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.openWindow.Waddle2;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		040135AF2900747000935CF0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Waddle2/Waddle2.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Waddle2/Preview Content\"";
+				DEVELOPMENT_TEAM = GV58N5RQL6;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Waddle2/Info.plist;
+				INFOPLIST_KEY_NSHealthShareUsageDescription = "This app requires data about your steps";
+				INFOPLIST_KEY_NSHealthUpdateUsageDescription = "This app needs your helth data";
+				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
+				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
+				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 12.3;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.openWindow.Waddle2;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		040135992900746F00935CF0 /* Build configuration list for PBXProject "Waddle2" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				040135AB2900747000935CF0 /* Debug */,
+				040135AC2900747000935CF0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		040135AD2900747000935CF0 /* Build configuration list for PBXNativeTarget "Waddle2" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				040135AE2900747000935CF0 /* Debug */,
+				040135AF2900747000935CF0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		040135B9290077E500935CF0 /* XCRemoteSwiftPackageReference "ConcentricOnboarding" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/exyte/ConcentricOnboarding";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+		040135BF2900793400935CF0 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 9.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		040135BA290077E500935CF0 /* ConcentricOnboarding */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 040135B9290077E500935CF0 /* XCRemoteSwiftPackageReference "ConcentricOnboarding" */;
+			productName = ConcentricOnboarding;
+		};
+		040135C02900793400935CF0 /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 040135BF2900793400935CF0 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
+		};
+		040135C22900793400935CF0 /* FirebaseFirestore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 040135BF2900793400935CF0 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestore;
+		};
+		040135C42900793400935CF0 /* FirebaseFirestoreSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 040135BF2900793400935CF0 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestoreSwift;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = 040135962900746F00935CF0 /* Project object */;
+}
