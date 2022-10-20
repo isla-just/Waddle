@@ -6,6 +6,8 @@
 //
 
 import SwiftUI
+import Firebase
+import FirebaseAuth
 
 struct Login: View {
     
@@ -14,7 +16,18 @@ struct Login: View {
     @State var email: String = ""
     @State var password: String = ""
     
+    @State var userIsLoggedIn: Bool = false
+    
     var body: some View {
+        
+        if userIsLoggedIn{
+            Dashboard()
+        }else{
+            content
+        }
+    }
+    
+    var content:some View{
         
         NavigationView(){
             ZStack(){
@@ -113,6 +126,15 @@ struct Login: View {
             
          
         }.background(Color("Light")).navigationBarBackButtonHidden(true).navigationBarHidden(true)
+            .onAppear{
+                Auth.auth().addStateDidChangeListener{auth, user in
+                    if user != nil{
+                        withAnimation{
+                            userIsLoggedIn.toggle()
+                        }
+                    }
+                }
+            }
     }
 }
 

@@ -6,16 +6,30 @@
 //
 
 import SwiftUI
+import Firebase
+import FirebaseAuth
 
 struct Signup: View {
     
     var authManager = AuthManager()
     
+    
     @State var username: String = ""
     @State var password: String = ""
     @State var email: String = ""
     
+    @State var userIsLoggedIn: Bool = false
+    
     var body: some View {
+        
+        if userIsLoggedIn{
+            Dashboard()
+        }else{
+            content
+        }
+    }
+    
+    var content:some View{
         NavigationView(){
             ZStack(){
                 Image("background2")
@@ -120,6 +134,15 @@ struct Signup: View {
             
          
         }.background(Color("Light")).navigationBarBackButtonHidden(true).navigationBarHidden(true)
+            .onAppear{
+                Auth.auth().addStateDidChangeListener{auth, user in
+                    if user != nil{
+                        withAnimation{
+                            userIsLoggedIn.toggle()
+                        }
+                    }
+                }
+            }
     }
 }
 

@@ -245,7 +245,7 @@ struct Dashboard: View {
                             )
                         ).padding(.top, 5)
 
-                    NavigationLink(destination: Login()){
+                    NavigationLink(destination: BioAuthView()){
 
                         ZStack{
                             RoundedRectangle(cornerRadius: 25, style: .continuous)
