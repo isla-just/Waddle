@@ -20,7 +20,7 @@ struct Dashboard: View {
     
     
     private func updateUIFromStatistics(_ statisticsCollection: HKStatisticsCollection){
-        let startDate = Calendar.current.date(byAdding: .day, value: -5, to: Date())!
+        let startDate = Calendar.current.date(byAdding: .day, value: -7, to: Date())!
         let endDate = Date()
         
         statisticsCollection.enumerateStatistics(from: startDate, to: endDate) {(statistics, stop) in

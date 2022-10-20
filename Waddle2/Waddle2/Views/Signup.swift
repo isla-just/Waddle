@@ -23,7 +23,7 @@ struct Signup: View {
     var body: some View {
         
         if userIsLoggedIn{
-            Dashboard()
+            WatchLink()
         }else{
             content
         }

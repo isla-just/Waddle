@@ -32,7 +32,7 @@ struct WatchLink: View {
                         .frame(width: .infinity, alignment: .leading).padding([.leading, .trailing], 13.0).padding(.top, 50)
                         .multilineTextAlignment(.center)
                     
-                    Text("Ensure your child’s Apple Watch is linked to this device")
+                    Text("Ensure your child’s Apple Watch is linked to this device and working with the health app")
                         .font(.system(size: 20, weight: .regular, design: .rounded))
                         .foregroundColor(Color("Dark"))
                         .fixedSize(horizontal: false, vertical: true)

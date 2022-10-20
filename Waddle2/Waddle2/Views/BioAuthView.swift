@@ -8,10 +8,44 @@
 import SwiftUI
 import LocalAuthentication // bio
 
+
+
 struct BioAuthView: View {
+
     @State var isUnlocked = false
     
+    func authenticate(){
+        let context = LAContext()
+        var error: NSError?
+        
+        if context.canEvaluatePolicy(.deviceOwnerAuthentication, error: &error){
+            
+            let reason = "we need to keep your memories safe"
+            
+            context.evaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, localizedReason: reason){
+                success, authenticationError in
+                if success{
+                   isUnlocked=true
+                }else{
+                    isUnlocked=false
+                }
+            }
+        }else{
+                    print("no biometrics");
+                }
+        }
+
+    
+    
     var body: some View {
+        
+        if isUnlocked == true{
+            Dashboard()
+        }else{
+            content
+        }
+    }
+    var content:some View{
         NavigationView(){
             ZStack(){
 
@@ -78,29 +112,19 @@ struct BioAuthView: View {
             
          
         }.background(Color("Light")).navigationBarBackButtonHidden(true).navigationBarHidden(true)
-    }
-    
-    func authenticate(){
-        let context = LAContext()
-        var error: NSError?
-        
-        if context.canEvaluatePolicy(.deviceOwnerAuthentication, error: &error){
+            .onAppear{
             
-            let reason = "we need to keep your memories safe"
-            
-            context.evaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, localizedReason: reason){
-                success, authenticationError in
-                if success{
-                   isUnlocked=true
-                }else{
-                    isUnlocked=false
+                    if isUnlocked != false{
+                        withAnimation{
+                            isUnlocked.toggle()
+                        }
+                    }
                 }
             }
-        }else{
-                    print("no biometrics");
-                }
-        }
-}
+        
+    }
+    
+
 
 struct BioAuthView_Previews: PreviewProvider {
     static var previews: some View {

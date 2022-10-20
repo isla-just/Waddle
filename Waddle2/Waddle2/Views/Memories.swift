@@ -37,6 +37,8 @@ struct Memories: View {
                     List(firestoreManager.memories){memory in
                         VStack{
                             
+                            Text("Am I fetching any memories?")
+                            
                             Text("\(memory.date)")
                             Text(memory.description)  .font(.system(size: 20, weight: .regular, design: .rounded))
                                 .foregroundColor(Color("Dark"))

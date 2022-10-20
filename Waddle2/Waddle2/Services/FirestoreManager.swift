@@ -29,17 +29,18 @@ class FirestoreManager: ObservableObject {
                     for document in querySnapshot!.documents {
                         let data = document.data()
                         
+                        print("\(document.documentID):\(document.data())")
                         print("this is your fetched data \(document.documentID) => \(document.data())")
 
-                        let a: MemoryModel = MemoryModel(img: data["image"] as? String ?? "", favourite: data["favourite"] as? Bool ?? true, description: data["description"] as? String ?? "", steps: data["steps"] as? Int ?? 0, date: data["date"] as? Date ?? Date.now)
-                     
-                            collData.append(a)
+//                        let a: MemoryModel = MemoryModel(img: data["image"] as? String ?? "", favourite: data["favourite"] as? Bool ?? true, description: data["description"] as? String ?? "", steps: data["steps"] as? Int ?? 0, date: data["date"] as? Date ?? Date.now)
+//
+//                            collData.append(a)
                     }
                 }
             
             
         }
-        self.memories = collData
+//        self.memories = collData
         
     }
     
