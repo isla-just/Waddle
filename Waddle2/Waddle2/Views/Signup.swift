@@ -9,6 +9,8 @@ import SwiftUI
 
 struct Signup: View {
     
+    var authManager = AuthManager()
+    
     @State var username: String = ""
     @State var password: String = ""
     @State var email: String = ""
@@ -86,11 +88,17 @@ struct Signup: View {
                             .fill(Color("Dark2"))
                             .frame(width: .infinity, height: 60)
                             .padding(.horizontal, 40).padding(.top, 20)
+                        
+                        Button(action:{
+                            print("register")
+                            authManager.registerUser(email: email, password: password)
+                        }){
+                            Text("sign up")   .font(.system(size: 18, weight: .semibold))
+                                .multilineTextAlignment(.center).foregroundColor(.white)
+                                .padding(.horizontal, 50).padding(.top, 20)
+                        }
 
-                        Text("Sign up")
-                            .font(.system(size: 18, weight: .semibold))
-                            .multilineTextAlignment(.center).foregroundColor(.white)
-                            .padding(.horizontal, 50).padding(.top, 20)
+           
                     }
                     }.navigationBarBackButtonHidden(true).navigationBarHidden(true)
                         

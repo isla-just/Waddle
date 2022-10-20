@@ -12,9 +12,13 @@ struct Add: View {
     @State var shouldShowImagePicker = false
     @State var image: UIImage?
     
+    @State var name: String = ""
     
+    @StateObject var firestore = FirestoreManager()
     
     var body: some View {
+        
+        
         NavigationView(){
             ZStack(){
                 
@@ -35,7 +39,7 @@ struct Add: View {
                     Text("Give it a name")
                         .font(.system(size: 20, weight: .regular, design: .rounded))
                         .foregroundColor(Color("Dark"))
-                        .frame(width: 300, alignment: .leading).padding(.bottom, 20)
+                        .frame(width: 300, alignment: .leading).padding(.bottom, 40)
                         .multilineTextAlignment(.leading)
                     
                     Button {
@@ -45,9 +49,31 @@ struct Add: View {
                                                   if let image = self.image {
                                                       Image(uiImage: image)
                                                           .resizable()
-                                                          .scaledToFit()
+                                                          .aspectRatio( contentMode: .fill)
                                                       .cornerRadius(20)
-                                                   .frame(width:300, height:348)
+                                                      .frame(width:340, height:338).clipShape(RoundedRectangle(
+                                                        cornerRadius: 20
+                                                      ))
+                                                      
+//                                                      ZStack{
+//
+//                                                          HStack{
+//                                                              Text("21 August 2021")
+//                                                                  .font(.system(size: 20, weight: .regular, design: .rounded))
+//                                                                  .foregroundColor(Color.white)
+//                                                                  .frame(alignment: .leading)
+//                                                                  .multilineTextAlignment(.leading).padding(.leading, 10)
+//                                                              Spacer()
+//
+//                                                              Image(systemName: "star.fill")
+//                                                                                          .resizable()
+//                                                                                          .foregroundColor(.white)
+//                                                                                          .aspectRatio(contentMode: .fit)
+//                                                                                          .frame(width:30, alignment: .trailing).padding(.trailing, 10)
+//
+//                                                          }
+//
+//                                                      }.padding().frame(width:340, height:300).padding(.top, -200)
                                                       
                                                   } else {
                                                       VStack{
@@ -66,7 +92,7 @@ struct Add: View {
                                                             radius: 20,
                                                             x: 0,
                                                             y: 2
-                                                        ).frame(width:300, height:348).padding(.top,280)   .shadow(
+                                                        ).frame(width:340, height:338).padding(.top,280)   .shadow(
                                                             color: Color.gray.opacity(0.2),
                                                             radius: 20,
                                                             x: 0,
@@ -78,79 +104,66 @@ struct Add: View {
                                      
                                           }
                     
-                    VStack(){
                     
-                  
-                        
-                            Image(systemName: "star.fill")
-                                .resizable()
-                                .foregroundColor(.white)
-                                .aspectRatio(contentMode: .fit)
-                                .frame(width:30, alignment: .trailing)
-                                .padding(.top, 10).padding(.leading, 220)
-                                
-                   
-                            
-                            
-                        }.padding(20).background(
-                            
-                            Rectangle()
-                            .fill(Color("Dark"))
-                            .cornerRadius(20)
-                            .shadow(
-                                color: Color.gray.opacity(0.2),
-                                radius: 20,
-                                x: 0,
-                                y: 2
-                            ).frame(width:300, height:348).padding(.top,280)
-                        )
-                    
-                    ZStack{
-                        Text("21 August 2021")
-                            .font(.system(size: 20, weight: .regular, design: .rounded))
-                            .foregroundColor(Color.white)
-                            .frame(width: 300, alignment: .leading).padding(.top, 220).padding(.leading, 50)
-                            .multilineTextAlignment(.leading)
-                    }
+
                     
                     
                     
                     ZStack{
-                        RoundedRectangle(cornerRadius: 25, style: .continuous)
-                            .fill(Color("Periwinkle").opacity(1))
-                            .frame(width: .infinity, height: 60)
-                            .padding(.horizontal, 43).padding(.top, 20)
+                     
+                    }.frame(width: .infinity, height: 60) .padding(.horizontal, 43).padding(.top, 20)
 
-
-
-                        TextField("memory name", text: .constant("memory name"))
-                            .background(Color.red.opacity(0))
-                            .cornerRadius(5)
-                            .padding(.horizontal, 50).padding(.top, 20) .accentColor(Color("DarkText"))
-                            .font(.system(size: 18, weight: .regular)).foregroundColor(Color("DarkText"))
-                    }.padding(.top, 10)
-
-
-                    NavigationLink(destination: Memory()){
                         ZStack{
                             RoundedRectangle(cornerRadius: 25, style: .continuous)
-                                .fill(Color("Dark2"))
+                                .fill(Color("Dark2").opacity(0))
                                 .frame(width: .infinity, height: 60)
                                 .padding(.horizontal, 43).padding(.top, 20)
                             
-                            Text("Save")
-                                .font(.system(size: 18, weight: .semibold))
-                                .multilineTextAlignment(.center).foregroundColor(.white)
-                                .padding(.horizontal, 0).padding(.top, 20)
+                           
                         }.padding(.top, -10)
-                    }
-                    
-                    
-                 
-                    
-                   
-                   
                 }
+                
+                ZStack{
+                    VStack{
+                        ZStack{
+                            RoundedRectangle(cornerRadius: 25, style: .continuous)
+                                .fill(Color("Periwinkle").opacity(1))
+                                .frame(width: .infinity, height: 60)
+                                .padding(.horizontal, 43).padding(.top, 20)
+
+                            TextField("memory name", text: $name)
+                                .background(Color.red.opacity(0))
+                                .cornerRadius(5)
+                                .padding(.horizontal, 50).padding(.top, 20) .accentColor(Color("Dark"))
+                                .font(.system(size: 18, weight: .regular)).foregroundColor(Color("Dark"))
+                        }
+                        
+                        Button(action: {
+                            print("Save")
+                            
+                            firestore.addMemory(image: "", description:name, steps: 1)
+                        }, label: {
+                            Text("Save")
+                        })
+                        
+                        NavigationLink(destination: Memory()){
+                            
+                            
+                            ZStack{
+                                RoundedRectangle(cornerRadius: 25, style: .continuous)
+                                    .fill(Color("Dark2"))
+                                    .frame(width: .infinity, height: 60)
+                                    .padding(.horizontal, 43).padding(.top, 20)
+                                
+                                Text("Save")
+                                    .font(.system(size: 18, weight: .semibold))
+                                    .multilineTextAlignment(.center).foregroundColor(.white)
+                                    .padding(.horizontal, 0).padding(.top, 20)
+                            }.padding(.top, -10)
+                        }
+                    }
+                }.padding(.top, 340)
+             
                 
                 ZStack{
                     RoundedRectangle(cornerRadius: 25, style: .continuous)

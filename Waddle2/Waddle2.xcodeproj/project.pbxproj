@@ -12,8 +12,6 @@
 		040135A62900747000935CF0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 040135A52900747000935CF0 /* Assets.xcassets */; };
 		040135AA2900747000935CF0 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 040135A92900747000935CF0 /* Preview Assets.xcassets */; };
 		040135B1290074A300935CF0 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 040135B0290074A300935CF0 /* Launch Screen.storyboard */; };
-		040135B62900760A00935CF0 /* FirestoreManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040135B52900760A00935CF0 /* FirestoreManager.swift */; };
-		040135B82900761400935CF0 /* MotionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040135B72900761400935CF0 /* MotionManager.swift */; };
 		040135BB290077E500935CF0 /* ConcentricOnboarding in Frameworks */ = {isa = PBXBuildFile; productRef = 040135BA290077E500935CF0 /* ConcentricOnboarding */; };
 		040135C12900793400935CF0 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 040135C02900793400935CF0 /* FirebaseAuth */; };
 		040135C32900793400935CF0 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 040135C22900793400935CF0 /* FirebaseFirestore */; };
@@ -21,6 +19,9 @@
 		040135C829007AD000935CF0 /* PageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040135C629007AD000935CF0 /* PageView.swift */; };
 		040135C929007AD000935CF0 /* MockData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040135C729007AD000935CF0 /* MockData.swift */; };
 		040135CB29007B7B00935CF0 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 040135CA29007B7B00935CF0 /* GoogleService-Info.plist */; };
+		046D90572901584400707636 /* AuthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046D90562901584400707636 /* AuthManager.swift */; };
+		0476F5832901461C0055E7BB /* MemoryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0476F5822901461C0055E7BB /* MemoryModel.swift */; };
+		0476F585290150590055E7BB /* FirestoreManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0476F584290150590055E7BB /* FirestoreManager.swift */; };
 		04C605A129007D2C005F5B77 /* Add.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C605A029007D2C005F5B77 /* Add.swift */; };
 		04C605A329007D57005F5B77 /* Dashboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C605A229007D57005F5B77 /* Dashboard.swift */; };
 		04C605A529007D8D005F5B77 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C605A429007D8D005F5B77 /* ImagePicker.swift */; };
@@ -42,11 +43,12 @@
 		040135A72900747000935CF0 /* Waddle2.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Waddle2.entitlements; sourceTree = "<group>"; };
 		040135A92900747000935CF0 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		040135B0290074A300935CF0 /* Launch Screen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = "Launch Screen.storyboard"; path = "../Waddle/Launch Screen.storyboard"; sourceTree = "<group>"; };
-		040135B52900760A00935CF0 /* FirestoreManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FirestoreManager.swift; path = ../../../../../../.Trash/FirestoreManager.swift; sourceTree = "<group>"; };
-		040135B72900761400935CF0 /* MotionManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MotionManager.swift; path = ../../../../../../.Trash/MotionManager.swift; sourceTree = "<group>"; };
 		040135C629007AD000935CF0 /* PageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PageView.swift; path = ../../Waddle/Waddle/PageView.swift; sourceTree = "<group>"; };
 		040135C729007AD000935CF0 /* MockData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MockData.swift; path = ../../Waddle/Waddle/MockData.swift; sourceTree = "<group>"; };
 		040135CA29007B7B00935CF0 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../../Desktop/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		046D90562901584400707636 /* AuthManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthManager.swift; sourceTree = "<group>"; };
+		0476F5822901461C0055E7BB /* MemoryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoryModel.swift; sourceTree = "<group>"; };
+		0476F584290150590055E7BB /* FirestoreManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirestoreManager.swift; sourceTree = "<group>"; };
 		04C605A029007D2C005F5B77 /* Add.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Add.swift; sourceTree = "<group>"; };
 		04C605A229007D57005F5B77 /* Dashboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dashboard.swift; sourceTree = "<group>"; };
 		04C605A429007D8D005F5B77 /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
@@ -123,9 +125,9 @@
 		040135B4290075FD00935CF0 /* Services */ = {
 			isa = PBXGroup;
 			children = (
-				040135B52900760A00935CF0 /* FirestoreManager.swift */,
-				040135B72900761400935CF0 /* MotionManager.swift */,
 				04C605B229007E65005F5B77 /* HealthStore.swift */,
+				0476F584290150590055E7BB /* FirestoreManager.swift */,
+				046D90562901584400707636 /* AuthManager.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -150,6 +152,7 @@
 			isa = PBXGroup;
 			children = (
 				04C605B629008767005F5B77 /* Step.swift */,
+				0476F5822901461C0055E7BB /* MemoryModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -237,21 +240,22 @@
 			buildActionMask = 2147483647;
 			files = (
 				04C605AB29007DD6005F5B77 /* Memory.swift in Sources */,
+				046D90572901584400707636 /* AuthManager.swift in Sources */,
 				040135C829007AD000935CF0 /* PageView.swift in Sources */,
 				04C605B729008767005F5B77 /* Step.swift in Sources */,
 				04C605B129007E1C005F5B77 /* WatchLink.swift in Sources */,
 				04C605A729007DA3005F5B77 /* Login.swift in Sources */,
 				040135C929007AD000935CF0 /* MockData.swift in Sources */,
 				04C605A329007D57005F5B77 /* Dashboard.swift in Sources */,
+				0476F585290150590055E7BB /* FirestoreManager.swift in Sources */,
 				04C605A529007D8D005F5B77 /* ImagePicker.swift in Sources */,
+				0476F5832901461C0055E7BB /* MemoryModel.swift in Sources */,
 				04C605A129007D2C005F5B77 /* Add.swift in Sources */,
 				04C605AF29007DFE005F5B77 /* Signup.swift in Sources */,
 				040135A42900746F00935CF0 /* ContentView.swift in Sources */,
-				040135B62900760A00935CF0 /* FirestoreManager.swift in Sources */,
 				04C605A929007DC1005F5B77 /* Memories.swift in Sources */,
 				04C605AD29007DED005F5B77 /* Setup.swift in Sources */,
 				040135A22900746F00935CF0 /* Waddle2App.swift in Sources */,
-				040135B82900761400935CF0 /* MotionManager.swift in Sources */,
 				04C605B329007E65005F5B77 /* HealthStore.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -9,13 +9,18 @@ import SwiftUI
 
 struct Memories: View {
     
+    @StateObject var firestoreManager = FirestoreManager()
+    var memories: [MemoryModel] = []
+    
     let columns = [GridItem(.flexible(maximum: 190)),
                    GridItem(.fixed(150))]
     
     var body: some View {
         NavigationView(){
             ZStack(){
-
+                
+                
+          
                 ScrollView(.vertical){
                     Text("Your memory journal")
                         .font(.system(size: 28, weight: .medium, design: .rounded))
@@ -28,6 +33,18 @@ struct Memories: View {
                         .foregroundColor(Color("Dark"))
                         .frame(width: 300, alignment: .leading).padding(.bottom, 20)
                         .multilineTextAlignment(.leading)
+                    
+                    List(firestoreManager.memories){memory in
+                        VStack{
+                            
+                            Text("\(memory.date)")
+                            Text(memory.description)  .font(.system(size: 20, weight: .regular, design: .rounded))
+                                .foregroundColor(Color("Dark"))
+                                .frame(width: 300, alignment: .leading).padding(.bottom, 20)
+                                .multilineTextAlignment(.leading)
+                        }
+                    }
+
                     
                     HStack(spacing: 10){
                         Text("past week")
@@ -167,7 +184,7 @@ struct Memories: View {
                     }.padding(.horizontal, 30)
                 }.padding(.bottom, 0).padding(.top, 750)
                 
-            }
+            }.background(Color("Light"))
             
          
         }.background(Color("Light")).navigationBarBackButtonHidden(true).navigationBarHidden(true)

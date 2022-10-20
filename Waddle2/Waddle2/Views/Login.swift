@@ -9,6 +9,7 @@ import SwiftUI
 
 struct Login: View {
     
+    var authManager = AuthManager()
     
     @State var email: String = ""
     @State var password: String = ""
@@ -73,16 +74,24 @@ struct Login: View {
                     
                     NavigationLink(destination: Dashboard()){
                       
+                    
+                        
                     ZStack{
                         RoundedRectangle(cornerRadius: 25, style: .continuous)
                             .fill(Color("Dark2"))
                             .frame(width: .infinity, height: 60)
                             .padding(.horizontal, 40).padding(.top, 20)
 
-                        Text("Sign in")
-                            .font(.system(size: 18, weight: .semibold))
-                            .multilineTextAlignment(.center).foregroundColor(.white)
-                            .padding(.horizontal, 50).padding(.top, 20)
+                        Button(action:{
+                            print("login")
+                            authManager.loginUser(email: email, password: password)
+                        }){
+                            Text("login user")  .font(.system(size: 18, weight: .semibold))
+                                .multilineTextAlignment(.center).foregroundColor(.white)
+                                .padding(.horizontal, 50).padding(.top, 20)
+                        }
+                        
+                   
                     }
                     }.navigationBarBackButtonHidden(true).navigationBarHidden(true)
                         
