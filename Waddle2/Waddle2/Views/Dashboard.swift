@@ -13,6 +13,9 @@ struct Dashboard: View {
     
     private var healthStore: HealthStore?
     @State private var steps: [Step] = [Step]()
+
+    
+    
     
     init(){
         healthStore = HealthStore()
@@ -20,7 +23,7 @@ struct Dashboard: View {
     
     
     private func updateUIFromStatistics(_ statisticsCollection: HKStatisticsCollection){
-        let startDate = Calendar.current.date(byAdding: .day, value: -7, to: Date())!
+        let startDate = Calendar.current.date(byAdding: .day, value: -5, to: Date())!
         let endDate = Date()
         
         statisticsCollection.enumerateStatistics(from: startDate, to: endDate) {(statistics, stop) in
@@ -29,6 +32,7 @@ struct Dashboard: View {
             
             let step = Step(count: Int(count ?? 0), date: statistics.startDate)
             steps.append(step)
+
         }
     }
     
@@ -60,119 +64,13 @@ struct Dashboard: View {
                         .frame(width: 300, alignment: .leading).padding(.bottom, 20)
                         .multilineTextAlignment(.leading)
 
-                    HStack{
-                        VStack{
-                            Text("Waddles of the week")
-                                .font(.system(size: 15, weight: .regular, design: .rounded))
-                                .foregroundColor(Color.white)
-                                .frame(width: 300, alignment: .center).padding(.bottom, 1)
-                                .multilineTextAlignment(.center)
-                            
-                            HStack{
-                                ForEach(steps, id: \.id) { step in
-                                    VStack{
-                                        Text("\(step.count)")
-                                            .font(.system(size: 30, weight: .semibold, design: .rounded))
-                                            .foregroundColor(Color.white)
-                                            .multilineTextAlignment(.center)
-                                        
-                                        Text(step.date, style: .date)
-                                            .font(.system(size: 15, weight: .regular, design: .rounded))
-                                            .foregroundColor(Color.white)
-                                            .multilineTextAlignment(.center)
-                                    }
-                                    
-                                }
-                            }.onAppear{
-                                if let healthStore = healthStore{
-                                    healthStore.requestAuthorization{success in
-                                        if success{
-                                            healthStore.calculateSteps{statisticsCollection in
-                                                if let statisticsCollection = statisticsCollection{
-                                                    //update db or frontend
-                                                    updateUIFromStatistics(statisticsCollection)
-                                                }
-                                            }
-                                        }
-                                        
-                                    }
-                                }
-                            }//onappear
-                        }
-                                
-                        }.padding(20).background(
+    
 
-                            Rectangle()
-                            .fill(Color("Dark2"))
-                            .cornerRadius(20)
-                            .shadow(
-                                color: Color.gray.opacity(0.2),
-                                radius: 20,
-                                x: 0,
-                                y: 2
-                            )
-                        ).padding(.bottom, 7)
+                    
+                             GraphView(steps: steps)
 
                      
-                    HStack{
-                        Image(systemName: "play.circle.fill")
-                            .resizable()
-                            .foregroundColor(.white)
-                            .aspectRatio(contentMode: .fit)
-                            .frame(width:34)
-                            .padding(.trailing, 20)
-
-
-
-                        Image(systemName: "waveform")
-                            .resizable()
-                            .foregroundColor(.white)
-                            .aspectRatio(contentMode:.fit)
-                            .frame(width:33)
-                        Image(systemName: "waveform")
-                            .resizable()
-                            .foregroundColor(.white)
-                            .aspectRatio(contentMode:.fit)
-                            .frame(width:33)
-                            .padding(.leading,-4)
-                        Image(systemName: "waveform")
-                            .resizable()
-                            .foregroundColor(.white)
-                            .aspectRatio(contentMode:.fit)
-                            .frame(width:33)
-                            .padding(.leading,-4)
-                        Image(systemName: "waveform")
-                            .resizable()
-                            .foregroundColor(.white)
-                            .aspectRatio(contentMode:.fit)
-                            .frame(width:33)
-                            .padding(.leading,-4)
-                        Image(systemName: "waveform")
-                            .resizable()
-                            .foregroundColor(.white)
-                            .aspectRatio(contentMode:.fit)
-                            .frame(width:33)
-                            .padding(.leading,-4)
-                        Image(systemName: "waveform")
-                            .resizable()
-                            .foregroundColor(.white)
-                            .aspectRatio(contentMode:.fit)
-                            .frame(width:33)
-                            .padding(.leading,-4)
-
-
-                    }.padding(20).background(
-
-                        Rectangle()
-                        .fill(Color("Dark"))
-                        .cornerRadius(20)
-                        .shadow(
-                            color: Color.gray.opacity(0.2),
-                            radius: 20,
-                            x: 0,
-                            y: 2
-                        )
-                    ).padding(.bottom, 25).padding(.leading, 5)
+              
 
                     Text("Favourite memories")
                         .font(.system(size: 20, weight: .medium, design: .rounded))
@@ -297,11 +195,26 @@ struct Dashboard: View {
 
 
                     }.padding(.horizontal, 30)
-                }.padding(.bottom, 0).padding(.top, 750)
+                }.padding(.bottom, 0).padding(.top, 730)
 
             }.background(Color("Light"))
 
         }.background(Color("Light")).navigationBarBackButtonHidden(true).navigationBarHidden(true)
+            .onAppear{
+            if let healthStore = healthStore{
+                healthStore.requestAuthorization{success in
+                    if success{
+                        healthStore.calculateSteps{statisticsCollection in
+                            if let statisticsCollection = statisticsCollection{
+                                //update db or frontend
+                                updateUIFromStatistics(statisticsCollection)
+                            }
+                        }
+                    }
+                    
+                }
+            }
+        }//onappear
 
     }
 }

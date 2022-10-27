@@ -16,7 +16,8 @@ struct ContentView: View {
         
 //        BioAuthView()
         
-        Signup()
+//        Signup()
+        Login()
 //        Dashboard()
 //        ConcentricOnboardingView(pageContents: MockData.pages.map { (PageView(page: $0), $0.color) })
 //            .duration(1.0)

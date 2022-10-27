@@ -94,8 +94,7 @@ struct Signup: View {
                     }.frame(width: 330, alignment: .leading).padding(.top, 10).padding(.bottom, 30)
                     
                     
-                
-                    NavigationLink(destination: WatchLink()){
+
                       
                     ZStack{
                         RoundedRectangle(cornerRadius: 25, style: .continuous)
@@ -106,6 +105,8 @@ struct Signup: View {
                         Button(action:{
                             print("register")
                             authManager.registerUser(email: email, password: password)
+                            
+                            userIsLoggedIn=true
                         }){
                             Text("sign up")   .font(.system(size: 18, weight: .semibold))
                                 .multilineTextAlignment(.center).foregroundColor(.white)
@@ -114,7 +115,8 @@ struct Signup: View {
 
            
                     }
-                    }.navigationBarBackButtonHidden(true).navigationBarHidden(true)
+
+
                         
                     HStack(alignment: .center){
                         Text("Already have an account?")

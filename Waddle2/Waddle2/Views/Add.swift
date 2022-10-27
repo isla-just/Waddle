@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import FirebaseStorage
 
 struct Add: View {
     
@@ -15,6 +16,8 @@ struct Add: View {
     @State var name: String = ""
     
     @StateObject var firestore = FirestoreManager()
+    
+    
     
     var body: some View {
         
@@ -55,25 +58,6 @@ struct Add: View {
                                                         cornerRadius: 20
                                                       ))
                                                       
-//                                                      ZStack{
-//
-//                                                          HStack{
-//                                                              Text("21 August 2021")
-//                                                                  .font(.system(size: 20, weight: .regular, design: .rounded))
-//                                                                  .foregroundColor(Color.white)
-//                                                                  .frame(alignment: .leading)
-//                                                                  .multilineTextAlignment(.leading).padding(.leading, 10)
-//                                                              Spacer()
-//
-//                                                              Image(systemName: "star.fill")
-//                                                                                          .resizable()
-//                                                                                          .foregroundColor(.white)
-//                                                                                          .aspectRatio(contentMode: .fit)
-//                                                                                          .frame(width:30, alignment: .trailing).padding(.trailing, 10)
-//
-//                                                          }
-//
-//                                                      }.padding().frame(width:340, height:300).padding(.top, -200)
                                                       
                                                   } else {
                                                       VStack{
@@ -141,14 +125,8 @@ struct Add: View {
                         Button(action: {
                             print("Save")
                             
-                            firestore.addMemory(image: "", description:name, steps: 1)
+                            firestore.addMemory(image: image!, description:name, steps: 1)
                         }, label: {
-                            Text("Save")
-                        })
-                        
-                        NavigationLink(destination: Memory()){
-                            
-                            
                             ZStack{
                                 RoundedRectangle(cornerRadius: 25, style: .continuous)
                                     .fill(Color("Dark2"))
@@ -160,9 +138,10 @@ struct Add: View {
                                     .multilineTextAlignment(.center).foregroundColor(.white)
                                     .padding(.horizontal, 0).padding(.top, 20)
                             }.padding(.top, -10)
-                        }
+                        })
+                     
                     }
-                }.padding(.top, 340)
+                }.padding(.top, 380)
              
                 
                 ZStack{
@@ -211,6 +190,9 @@ struct Add: View {
             .ignoresSafeArea()}
         
     }
+    
+     
+    
 }
 
 struct Add_Previews: PreviewProvider {
@@ -218,3 +200,4 @@ struct Add_Previews: PreviewProvider {
         Add()
     }
 }
+

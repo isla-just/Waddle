@@ -85,10 +85,7 @@ struct Login: View {
                     
                     
                     
-                    NavigationLink(destination: Dashboard()){
-                      
-                    
-                        
+    
                     ZStack{
                         RoundedRectangle(cornerRadius: 25, style: .continuous)
                             .fill(Color("Dark2"))
@@ -98,6 +95,7 @@ struct Login: View {
                         Button(action:{
                             print("login")
                             authManager.loginUser(email: email, password: password)
+                            userIsLoggedIn=true
                         }){
                             Text("login user")  .font(.system(size: 18, weight: .semibold))
                                 .multilineTextAlignment(.center).foregroundColor(.white)
@@ -106,7 +104,7 @@ struct Login: View {
                         
                    
                     }
-                    }.navigationBarBackButtonHidden(true).navigationBarHidden(true)
+
                         
                     HStack(alignment: .center){
                         Text("Don't have an account yet?")

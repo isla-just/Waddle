@@ -9,8 +9,8 @@ import SwiftUI
 
 struct Memories: View {
     
-    @StateObject var firestoreManager = FirestoreManager()
-    var memories: [MemoryModel] = []
+    @StateObject private var firestoreData = FirestoreManager()
+    
     
     let columns = [GridItem(.flexible(maximum: 190)),
                    GridItem(.fixed(150))]
@@ -33,19 +33,7 @@ struct Memories: View {
                         .foregroundColor(Color("Dark"))
                         .frame(width: 300, alignment: .leading).padding(.bottom, 20)
                         .multilineTextAlignment(.leading)
-                    
-                    List(firestoreManager.memories){memory in
-                        VStack{
-                            
-                            Text("Am I fetching any memories?")
-                            
-                            Text("\(memory.date)")
-                            Text(memory.description)  .font(.system(size: 20, weight: .regular, design: .rounded))
-                                .foregroundColor(Color("Dark"))
-                                .frame(width: 300, alignment: .leading).padding(.bottom, 20)
-                                .multilineTextAlignment(.leading)
-                        }
-                    }
+                
 
                     
                     HStack(spacing: 10){
@@ -98,51 +86,65 @@ struct Memories: View {
                     
                     
                     VStack{
-         
-                        LazyVGrid(columns: columns) {
+                        
+                        
+                        List(firestoreData.memories){memory in
                             
-                            //                        ForEach(spends) {spend in
-                            //                            NavigationLink(destination: Details(spend: spend)) {
-                            
-                            NavigationLink(destination: Memory()){
-                                
                             VStack{
-                                
-                            
-                                    VStack{
-                                        Text("10/07/2022")
-                                            .font(.system(size: 15, weight: .medium))
-                                            .multilineTextAlignment(.leading).foregroundColor(Color.white)
-                                            .padding(.top, 90)
-                                            .padding(.horizontal, 15)
-                                        
-                                    }.padding(20).background(
-                                        
-                                        Rectangle()
-                                            .fill(Color("Dark"))
-                                            .cornerRadius(20)
-                                            .shadow(
-                                                color: Color.gray.opacity(0.2),
-                                                radius: 20,
-                                                x: 0,
-                                                y: 2
-                                            ).frame(height: 160)
-                                    ).padding(.bottom, 5)
-                                    
-                                    Text("A waddle in the park")
-                                        .font(.system(size: 18, weight: .medium))
-                                        .multilineTextAlignment(.leading).foregroundColor(Color("Dark"))
-                                        .padding(.leading, -8).frame(width: 160)
-                                    
-                                }.padding(.top, 0)
-                                
-                                
-                            }//vstack
+                                Text("\(memory.date)")
+                                Text(memory.description)  .font(.system(size: 20, weight: .regular, design: .rounded))
+                                    .foregroundColor(Color("Dark"))
+                                    .frame(width: 300, alignment: .leading).padding(.bottom, 20)
+                                    .multilineTextAlignment(.leading)
+                            }
+                               
                         }
-
-//                        }//foreach
-//
-                    }.padding(10).padding(.top, 20)//lazygrid
+                        //
+                        //                        LazyVGrid(columns: columns) {
+                        //
+                        //                                                    ForEach(firestoreManager.memories) {memory in
+                        //                                                        NavigationLink(destination: Memory(memory: memory)) {
+                        //
+                        //                            NavigationLink(destination: Memory()){
+                        //
+                        //                            VStack{
+                        //
+                        //
+                        //                                    VStack{
+                        //                                        Text("10/07/2022")
+                        //                                            .font(.system(size: 15, weight: .medium))
+                        //                                            .multilineTextAlignment(.leading).foregroundColor(Color.white)
+                        //                                            .padding(.top, 90)
+                        //                                            .padding(.horizontal, 15)
+                        //
+                        //                                    }.padding(20).background(
+                        //
+                        //                                        Rectangle()
+                        //                                            .fill(Color("Dark"))
+                        //                                            .cornerRadius(20)
+                        //                                            .shadow(
+                        //                                                color: Color.gray.opacity(0.2),
+                        //                                                radius: 20,
+                        //                                                x: 0,
+                        //                                                y: 2
+                        //                                            ).frame(height: 160)
+                        //                                    ).padding(.bottom, 5)
+                        //
+                        //                                    Text("A waddle in the park")
+                        //                                        .font(.system(size: 18, weight: .medium))
+                        //                                        .multilineTextAlignment(.leading).foregroundColor(Color("Dark"))
+                        //                                        .padding(.leading, -8).frame(width: 160)
+                        //
+                        //                                }.padding(.top, 0)
+                        //
+                        //
+                        //                            }//vstack
+                        //                        }
+                        //
+                        //                        }//foreach
+                        ////
+                        //                    }.padding(10).padding(.top, 20)//lazygrid
+                    }
            
                
                     
