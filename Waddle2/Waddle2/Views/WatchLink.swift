@@ -18,18 +18,14 @@ struct WatchLink: View {
                         .resizable()
                         .aspectRatio(contentMode: .fit)
                         .frame(width: 150, height: 150)
-                        .padding(.bottom, 30)
+                      
                     
-                    Image("ill1")
+                    Image("ill2")
                         .resizable()
                         .aspectRatio(contentMode: .fit)
-                        .frame(width: 320, height: 320)
-                    padding(.bottom, 20)
+                        .frame(width: 420, height: 320)
                 
-    
-                    
-        
-                    
+
                     Text("Time to start tracking steps!")
                         .font(.system(size: 30, weight: .medium, design: .rounded))
                         .foregroundColor(Color("Dark"))

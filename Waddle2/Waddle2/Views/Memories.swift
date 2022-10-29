@@ -22,6 +22,8 @@ struct Memories: View {
     let columns = [GridItem(.flexible(maximum: 190)),
                    GridItem(.fixed(150))]
     
+    @State var isSearchText: String = ""
+    
     var body: some View {
         NavigationView(){
             ZStack(){
@@ -41,35 +43,59 @@ struct Memories: View {
                         .frame(width: .infinity, alignment: .leading).padding(.bottom, 20)
                         .multilineTextAlignment(.center)
                 
+                    ZStack{
+                        RoundedRectangle(cornerRadius: 25, style: .continuous)
+                            .fill(Color("Periwinkle"))
+                            .frame(width: .infinity, height: 70)
+                            .padding(.horizontal, 35).padding(.top, 20)
 
-                    
-                    HStack(spacing: 10){
-                        Text("past week")
-                            .font(.system(size: 18, weight: .regular, design: .rounded))
-                            .foregroundColor(Color("Dark"))
-                            .multilineTextAlignment(.leading)
-                            .padding(5)
-                            .padding(.horizontal, 8)
-                            .background(Color("Peach"))
-                            .clipShape(Capsule())
+
+                        HStack{
+                            
+                            Image(systemName: "magnifyingglass") .symbolRenderingMode(.multicolor)
+                                .resizable()
+                                .aspectRatio(contentMode: .fit)
+                                .frame(width: 20, height: 20, alignment: .center)
+                                .padding(.leading, 60).padding(.top, 20) .foregroundColor(Color("Dark"))
+                            
+                            
+                            TextField("Search memories", text: $isSearchText)
+                                .background(Color.red.opacity(0))
+                                .cornerRadius(5)
+                                .padding(.horizontal, 10).padding(.top, 20) .accentColor(Color("Accent"))
+                                .font(.system(size: 18, weight: .regular)).foregroundColor(Color("Dark"))
+                        }
                         
-                        Text("past month")
-                            .font(.system(size: 18, weight: .regular, design: .rounded))
-                            .foregroundColor(Color("Dark"))
-                            .multilineTextAlignment(.leading)
-                            .padding(5)
-                            .padding(.horizontal, 8)
-                            .background(Color("Yellow"))
-                            .clipShape(Capsule())
-                        Text("past year")
-                            .font(.system(size: 18, weight: .regular, design: .rounded))
-                            .foregroundColor(Color("Dark"))
-                            .multilineTextAlignment(.leading)
-                            .padding(5)
-                            .padding(.horizontal, 8)
-                            .background(Color("Periwinkle"))
-                            .clipShape(Capsule())
-                    }
+                      
+                    }.padding(.top, 20)
+                    
+//                    HStack(spacing: 10){
+//                        Text("past week")
+//                            .font(.system(size: 18, weight: .regular, design: .rounded))
+//                            .foregroundColor(Color("Dark"))
+//                            .multilineTextAlignment(.leading)
+//                            .padding(5)
+//                            .padding(.horizontal, 8)
+//                            .background(Color("Peach"))
+//                            .clipShape(Capsule())
+//
+//                        Text("past month")
+//                            .font(.system(size: 18, weight: .regular, design: .rounded))
+//                            .foregroundColor(Color("Dark"))
+//                            .multilineTextAlignment(.leading)
+//                            .padding(5)
+//                            .padding(.horizontal, 8)
+//                            .background(Color("Yellow"))
+//                            .clipShape(Capsule())
+//                        Text("past year")
+//                            .font(.system(size: 18, weight: .regular, design: .rounded))
+//                            .foregroundColor(Color("Dark"))
+//                            .multilineTextAlignment(.leading)
+//                            .padding(5)
+//                            .padding(.horizontal, 8)
+//                            .background(Color("Periwinkle"))
+//                            .clipShape(Capsule())
+//                    }
                   
                 
    
@@ -173,6 +199,18 @@ struct Memories: View {
             
          
         }.background(Color("Light")).navigationBarBackButtonHidden(true).navigationBarHidden(true)
+            .onChange(of: isSearchText){ _ in
+                if(!isSearchText.isEmpty){
+                    self.firestoreData.memories = firestoreData.memories.filter{ $0.description.contains(isSearchText)}
+                }else{
+                    self.firestoreData.memories=firestoreData.memories
+                }
+           }
+    }
+    
+    func searchData()->[MemoryModel]{
+        
+      return firestoreData.memories.filter{ $0.description.contains(isSearchText)}
     }
 }
 

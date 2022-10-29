@@ -41,9 +41,7 @@ class FirestoreManager: ObservableObject {
                                         self.memories.append(MemoryModel(img: data["image"] as? String ?? "", favourite: data["favourite"] as? Bool ?? false, description: data["description"] as? String ?? "", steps: data["steps"] as? Int ?? 0, date: data["date"] as? Date ?? Date.now))
                     
                 }
-                  
-                    
-                    print(self.memories)
+         
                     }
                 }
             

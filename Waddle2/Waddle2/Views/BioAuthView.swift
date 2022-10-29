@@ -54,12 +54,14 @@ struct BioAuthView: View {
                         .resizable()
                         .aspectRatio(contentMode: .fit)
                         .frame(width: 150, height: 150)
-                        .padding(.bottom, 5)
+                        .padding(.top, -50)
+                       
                     
-                    Circle()
-                        .fill(Color("Periwinkle"))
-                        .frame(width: 222, height: 222)
-                        .padding(.bottom, 5)
+                    Image("ill1")
+                        .resizable()
+                        .aspectRatio(contentMode: .fit)
+                        .frame(width: 420, height: 300).padding(.top, -10)
+                
                     
                     Text(isUnlocked ? "Need authentication" : "Is logged in")
                     

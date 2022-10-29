@@ -13,8 +13,9 @@ struct Setup: View {
             ZStack(){
                 Image("background2")
                     .resizable()
-                    .aspectRatio(contentMode: .fit)
-                    .frame(width: 390, height: 842).ignoresSafeArea()
+                    .ignoresSafeArea()
+                    .aspectRatio(contentMode: .fill)
+                    .frame(width: .infinity)
                 
                 VStack(){
                     Text("So here’s the deal...")

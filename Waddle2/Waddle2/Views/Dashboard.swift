@@ -7,13 +7,24 @@
 
 import SwiftUI
 import HealthKit
-import Charts
+import SDWebImageSwiftUI
+
 
 struct Dashboard: View {
     
     private var healthStore: HealthStore?
     @State private var steps: [Step] = [Step]()
+
     @StateObject private var firestoreData = FirestoreManager()
+    
+    let columns = [GridItem(.flexible(maximum: 190)),
+                   GridItem(.fixed(140))]
+    
+    static let dateFormatter: DateFormatter = {
+        let formatter = DateFormatter()
+        formatter.dateFormat = "dd/MM/YY"
+        return formatter
+    }()
 
     
     
@@ -90,69 +101,64 @@ struct Dashboard: View {
                         .multilineTextAlignment(.leading)
 
 
-                        HStack{
-                            VStack{
-                                VStack{
-
-                                }.frame(width: 139, height: 130).background(
-
-                                    Rectangle()
-                                    .fill(Color("Yellow"))
-                                    .cornerRadius(20)
-                                    .shadow(
-                                        color: Color.gray.opacity(0.2),
-                                        radius: 20,
-                                        x: 0,
-                                        y: 2
-                                    )
-                                ).padding(.top, 15).padding(.trailing, 5)
-
-                                VStack{
-
-                                }.frame(width: 139, height: 46).background(
-
-                                    Rectangle()
-                                    .fill(Color("Periwinkle"))
-                                    .cornerRadius(20)
-                                    .shadow(
-                                        color: Color.gray.opacity(0.2),
-                                        radius: 20,
-                                        x: 0,
-                                        y: 2
-                                    )
-                                ).padding(.top, 5).padding(.trailing, 5)
-                            }
-
-                            VStack{
-
-                            }.frame(width: 139, height: 190).background(
-
-                                Rectangle()
-                                .fill(Color("Peach"))
-                                .cornerRadius(20)
-                                .shadow(
-                                    color: Color.gray.opacity(0.2),
-                                    radius: 20,
-                                    x: 0,
-                                    y: 2
-                                )
-                            ).padding(.top, 15)
-                        }
-
-                        HStack{
-
-                        }.frame(width: 293, height: 130).background(
-
-                            Rectangle()
-                            .fill(Color("Dark2"))
-                            .cornerRadius(20)
-                            .shadow(
-                                color: Color.gray.opacity(0.2),
-                                radius: 20,
-                                x: 0,
-                                y: 2
-                            )
-                        ).padding(.top, 5)
+                    LazyVGrid(columns: columns) {
+                                   
+                     ForEach(firestoreData.memories){memory in
+           //                                                                                NavigationLink(destination: Memory(memory: memory)) {
+           //
+                           
+                         NavigationLink(destination: Memory(memory: memory)){
+                             VStack{
+                                 
+                                 
+                               ZStack{
+                                   
+                             
+                                   VStack{
+                          
+                                        }.padding(20).background(
+                                                
+                                                                                        Rectangle()
+                                                                                           .fill(.black.opacity(0.3))
+                                                                                            .cornerRadius(20)
+                                                                                            .shadow(
+                                                                                                color: Color.gray.opacity(0.2),
+                                                                                                radius: 20,
+                                                                                                x: 0,
+                                                                                                y: 2
+                                                                                            ).frame(width: 140)
+                                                                                    ).padding(.bottom, 5)
+                                   
+                                   WebImage(url: URL(string: memory.img))
+                                       .resizable()
+                                       .cornerRadius(20)
+                                       .frame(width: 140, height: 150)
+                                       .aspectRatio(contentMode: .fill)
+                                   
+                                   Text("\(memory.date,formatter:Self.dateFormatter)")
+                                      .font(.system(size: 15, weight: .medium))
+                                      .multilineTextAlignment(.leading).foregroundColor(Color.white)
+                                    .padding(.top, 90)
+                                    .padding(.horizontal, 15)
+                                                
+                                   }
+                               
+                                 Text(memory.description)
+                                                                                   .font(.system(size: 18, weight: .medium))
+                                                                                   .multilineTextAlignment(.center).foregroundColor(Color("Dark"))
+                                                                                   .lineLimit(2)
+                                                                                   .padding(.leading, -8).frame(width: 160).padding(.bottom, 20)
+                                           
+                                           
+                                           
+                                                                       }//vstack
+                         }
+                  
+                                   
+                                                           }//foreach
+                                   //
+                                                           }.padding(.leading, -30).padding(.top, 20)//lazygrid
+                               
 
                     NavigationLink(destination: BioAuthView()){
 
