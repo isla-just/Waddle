@@ -52,7 +52,7 @@ struct Add: View {
                                                   if let image = self.image {
                                                       Image(uiImage: image)
                                                           .resizable()
-                                                          .aspectRatio( contentMode: .fill)
+                                                          .aspectRatio( contentMode: .fit)
                                                       .cornerRadius(20)
                                                       .frame(width:340, height:338).clipShape(RoundedRectangle(
                                                         cornerRadius: 20
@@ -180,7 +180,7 @@ struct Add: View {
                   
             
                     }.padding(.horizontal, 30)
-                }.padding(.bottom, 0).padding(.top, 750)
+                }.padding(.bottom, 0).padding(.top, 730)
                 
             }.background(Color("Light"))
             

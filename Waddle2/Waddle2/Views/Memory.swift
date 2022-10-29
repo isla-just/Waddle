@@ -6,8 +6,18 @@
 //
 
 import SwiftUI
+import SDWebImageSwiftUI
 
 struct Memory: View {
+    
+    var memory: MemoryModel
+    static let dateFormatter: DateFormatter = {
+        let formatter = DateFormatter()
+        formatter.dateFormat = "dd/MM/YY"
+        return formatter
+    }()
+    
+    
     var body: some View {
         NavigationView(){
             ZStack(){
@@ -20,43 +30,32 @@ struct Memory: View {
                 }
 
                 ScrollView(.vertical){
-                    Text("A waddle in the park")
+                    Text(memory.description)
                         .font(.system(size: 28, weight: .medium, design: .rounded))
                         .foregroundColor(Color("Dark"))
                         .frame(width: 300, alignment: .leading).padding(.bottom, 0)
                         .multilineTextAlignment(.leading).padding(.top, 80)
                     
-                    Text("21 August 2021")
+                    Text("\(memory.date,formatter:Self.dateFormatter)")
                         .font(.system(size: 20, weight: .regular, design: .rounded))
                         .foregroundColor(Color("Dark"))
                         .frame(width: 300, alignment: .leading).padding(.bottom, 20)
                         .multilineTextAlignment(.leading)
                     
                 
-                    HStack(){
-                    
-                        Image(systemName: "star.fill")
-                            .resizable()
-                            .foregroundColor(.white)
-                            .aspectRatio(contentMode: .fit)
-                            .frame(width:30, alignment: .trailing)
-                            .padding(.top, 10).padding(.leading, 220)
-                            
-               
-                        
-                        
-                    }.padding(20).background(
-                        
-                        Rectangle()
-                        .fill(Color("Dark"))
+                    WebImage(url: URL(string: memory.img))
+                        .resizable()
+                        .frame(width:300, height:318)
+                        .cornerRadius(20)
+                        .aspectRatio(contentMode: .fit)
                         .cornerRadius(20)
                         .shadow(
                             color: Color.gray.opacity(0.2),
                             radius: 20,
                             x: 0,
                             y: 2
-                        ).frame(width:300, height:348).padding(.top,280)
-                    )
+                        )
+                    
                     
                     ZStack{
                         RoundedRectangle(cornerRadius: 25, style: .continuous)
@@ -64,11 +63,11 @@ struct Memory: View {
                             .frame(width: .infinity, height: 60)
                             .padding(.horizontal, 80).padding(.top, 20)
 
-                        Text("201 steps")
+                        Text("\(memory.steps) waddles")
                             .font(.system(size: 18, weight: .regular))
                             .multilineTextAlignment(.center).foregroundColor(Color("Dark"))
                             .padding(.horizontal, 0).padding(.top, 20)
-                    }.padding(.top, 210)
+                    }.padding(.top, -60)
                     
                     NavigationLink(destination: Dashboard()){
                         ZStack{
@@ -125,9 +124,9 @@ struct Memory: View {
                        
 
                     }.padding(.horizontal, 30)
-                }.padding(.bottom, 0).padding(.top, 750)
+                }.padding(.bottom, 0).padding(.top, 730)
                 
-            }
+            }.background(Color("Light"))
             
          
         }.background(Color("Light")).navigationBarBackButtonHidden(true).navigationBarHidden(true)
@@ -136,6 +135,6 @@ struct Memory: View {
 
 struct Memory_Previews: PreviewProvider {
     static var previews: some View {
-        Memory()
+        Memory(memory: FirestoreManager().memories[0])
     }
 }

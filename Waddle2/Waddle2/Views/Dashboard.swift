@@ -13,6 +13,7 @@ struct Dashboard: View {
     
     private var healthStore: HealthStore?
     @State private var steps: [Step] = [Step]()
+    @StateObject private var firestoreData = FirestoreManager()
 
     
     
@@ -69,10 +70,20 @@ struct Dashboard: View {
                     
                              GraphView(steps: steps)
 
-                     
+                    List(firestoreData.memories){memory in
+                        
+                        VStack{
+                            Text("\(memory.date)")
+                            Text(memory.description)  .font(.system(size: 20, weight: .regular, design: .rounded))
+                                .foregroundColor(Color("Dark"))
+                                .frame(width: 300, alignment: .leading).padding(.bottom, 20)
+                                .multilineTextAlignment(.leading)
+                        }
+                           
+                    }
               
 
-                    Text("Favourite memories")
+                    Text("Recent memories")
                         .font(.system(size: 20, weight: .medium, design: .rounded))
                         .foregroundColor(Color("Dark"))
                         .frame(width: 300, alignment: .leading).padding(.bottom, 1)

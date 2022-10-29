@@ -20,10 +20,15 @@ struct WatchLink: View {
                         .frame(width: 150, height: 150)
                         .padding(.bottom, 30)
                     
-                    Circle()
-                        .fill(Color("Periwinkle"))
-                        .frame(width: 222, height: 222)
-                        .padding(.bottom, 20)
+                    Image("ill1")
+                        .resizable()
+                        .aspectRatio(contentMode: .fit)
+                        .frame(width: 320, height: 320)
+                    padding(.bottom, 20)
+                
+    
+                    
+        
                     
                     Text("Time to start tracking steps!")
                         .font(.system(size: 30, weight: .medium, design: .rounded))

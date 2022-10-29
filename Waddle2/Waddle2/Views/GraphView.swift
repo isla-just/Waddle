@@ -15,6 +15,7 @@ struct GraphView: View {
         return formatter
     }()
     
+    
     let steps: [Step]
     var totalSteps: Int{
         steps.map{$0.count}.reduce(0,+)

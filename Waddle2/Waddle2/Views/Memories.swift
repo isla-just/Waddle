@@ -6,8 +6,15 @@
 //
 
 import SwiftUI
+import SDWebImageSwiftUI
 
 struct Memories: View {
+    
+    static let dateFormatter: DateFormatter = {
+        let formatter = DateFormatter()
+        formatter.dateFormat = "dd/MM/YY"
+        return formatter
+    }()
     
     @StateObject private var firestoreData = FirestoreManager()
     
@@ -25,14 +32,14 @@ struct Memories: View {
                     Text("Your memory journal")
                         .font(.system(size: 28, weight: .medium, design: .rounded))
                         .foregroundColor(Color("Dark"))
-                        .frame(width: 300, alignment: .leading).padding(.bottom, 0)
-                        .multilineTextAlignment(.leading).padding(.top, 80)
+                        .frame(width: .infinity, alignment: .leading).padding(.bottom, 0)
+                        .multilineTextAlignment(.center).padding(.top, 80)
                     
                     Text("Documenting life’s small moments")
                         .font(.system(size: 20, weight: .regular, design: .rounded))
                         .foregroundColor(Color("Dark"))
-                        .frame(width: 300, alignment: .leading).padding(.bottom, 20)
-                        .multilineTextAlignment(.leading)
+                        .frame(width: .infinity, alignment: .leading).padding(.bottom, 20)
+                        .multilineTextAlignment(.center)
                 
 
                     
@@ -64,93 +71,67 @@ struct Memories: View {
                             .clipShape(Capsule())
                     }
                   
-                    HStack(spacing: 10){
-                        Text("favourites")
-                            .font(.system(size: 18, weight: .regular, design: .rounded))
-                            .foregroundColor(Color("Dark"))
-                            .multilineTextAlignment(.leading)
-                            .padding(5)
-                            .padding(.horizontal, 8)
-                            .background(Color("Periwinkle"))
-                            .clipShape(Capsule())
+                
+   
+         LazyVGrid(columns: columns) {
                         
-                        Text("earliest memories")
-                            .font(.system(size: 18, weight: .regular, design: .rounded))
-                            .foregroundColor(Color("Dark"))
-                            .multilineTextAlignment(.leading)
-                            .padding(5)
-                            .padding(.horizontal, 8)
-                            .background(Color("Peach"))
-                            .clipShape(Capsule())
-                    }.padding(.top, 5)
-                    
-                    
-                    VStack{
+          ForEach(firestoreData.memories){memory in
+//                                                                                NavigationLink(destination: Memory(memory: memory)) {
+//
+                
+              NavigationLink(destination: Memory(memory: memory)){
+                  VStack{
+                      
+                      
+                    ZStack{
                         
-                        
-                        List(firestoreData.memories){memory in
-                            
-                            VStack{
-                                Text("\(memory.date)")
-                                Text(memory.description)  .font(.system(size: 20, weight: .regular, design: .rounded))
-                                    .foregroundColor(Color("Dark"))
-                                    .frame(width: 300, alignment: .leading).padding(.bottom, 20)
-                                    .multilineTextAlignment(.leading)
-                            }
-                               
-                        }
-                        //
-                        //                        LazyVGrid(columns: columns) {
-                        //
-                        //                                                    ForEach(firestoreManager.memories) {memory in
-                        //                                                        NavigationLink(destination: Memory(memory: memory)) {
-                        //
-                        //                            NavigationLink(destination: Memory()){
-                        //
-                        //                            VStack{
-                        //
-                        //
-                        //                                    VStack{
-                        //                                        Text("10/07/2022")
-                        //                                            .font(.system(size: 15, weight: .medium))
-                        //                                            .multilineTextAlignment(.leading).foregroundColor(Color.white)
-                        //                                            .padding(.top, 90)
-                        //                                            .padding(.horizontal, 15)
-                        //
-                        //                                    }.padding(20).background(
-                        //
-                        //                                        Rectangle()
-                        //                                            .fill(Color("Dark"))
-                        //                                            .cornerRadius(20)
-                        //                                            .shadow(
-                        //                                                color: Color.gray.opacity(0.2),
-                        //                                                radius: 20,
-                        //                                                x: 0,
-                        //                                                y: 2
-                        //                                            ).frame(height: 160)
-                        //                                    ).padding(.bottom, 5)
-                        //
-                        //                                    Text("A waddle in the park")
-                        //                                        .font(.system(size: 18, weight: .medium))
-                        //                                        .multilineTextAlignment(.leading).foregroundColor(Color("Dark"))
-                        //                                        .padding(.leading, -8).frame(width: 160)
-                        //
-                        //                                }.padding(.top, 0)
-                        //
-                        //
-                        //                            }//vstack
-                        //                        }
-                        //
-                        //                        }//foreach
-                        ////
-                        //                    }.padding(10).padding(.top, 20)//lazygrid
-                    }
-           
+                  
+                        VStack{
                
+                             }.padding(20).background(
+                                     
+                                                                             Rectangle()
+                                                                                .fill(.black.opacity(0.3))
+                                                                                 .cornerRadius(20)
+                                                                                 .shadow(
+                                                                                     color: Color.gray.opacity(0.2),
+                                                                                     radius: 20,
+                                                                                     x: 0,
+                                                                                     y: 2
+                                                                                 ).frame(width: 160)
+                                                                         ).padding(.bottom, 5)
+                        
+                        WebImage(url: URL(string: memory.img))
+                            .resizable()
+                            .cornerRadius(20)
+                            .frame(width: 160, height: 150)
+                            .aspectRatio(contentMode: .fill)
+                        
+                        Text("\(memory.date,formatter:Self.dateFormatter)")
+                           .font(.system(size: 15, weight: .medium))
+                           .multilineTextAlignment(.leading).foregroundColor(Color.white)
+                         .padding(.top, 90)
+                         .padding(.horizontal, 15)
+                                     
+                        }
                     
-                   
-                   
-                }//vstack1
+                      Text(memory.description)
+                                                                        .font(.system(size: 18, weight: .medium))
+                                                                        .multilineTextAlignment(.center).foregroundColor(Color("Dark"))
+                                                                        .lineLimit(2)
+                                                                        .padding(.leading, -8).frame(width: 160).padding(.bottom, 20)
+                                
+                                
+                                
+                                                            }//vstack
+              }
+       
+                        
+                                                }//foreach
+                        //
+                                                }.padding(.leading, -20).padding(.top, 20)//lazygrid
+                    }
+
                 
                 ZStack{
                     RoundedRectangle(cornerRadius: 25, style: .continuous)
@@ -186,7 +167,7 @@ struct Memories: View {
                         }
 
                     }.padding(.horizontal, 30)
-                }.padding(.bottom, 0).padding(.top, 750)
+                }.padding(.bottom, 0).padding(.top, 730)
                 
             }.background(Color("Light"))
             
