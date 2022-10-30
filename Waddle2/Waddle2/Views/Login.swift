@@ -15,8 +15,8 @@ struct Login: View {
     
     @State var email: String = ""
     @State var password: String = ""
-    
-    @State var userIsLoggedIn: Bool = false
+
+    @AppStorage("userIsLoggedIn") var userIsLoggedIn: Bool = false
     
     var body: some View {
         
@@ -95,7 +95,7 @@ struct Login: View {
                         Button(action:{
                             print("login")
                             authManager.loginUser(email: email, password: password)
-                            userIsLoggedIn=true
+                            userIsLoggedIn = true
                         }){
                             Text("login user")  .font(.system(size: 18, weight: .semibold))
                                 .multilineTextAlignment(.center).foregroundColor(.white)
@@ -128,7 +128,7 @@ struct Login: View {
                 Auth.auth().addStateDidChangeListener{auth, user in
                     if user != nil{
                         withAnimation{
-                            userIsLoggedIn.toggle()
+                            userIsLoggedIn=true
                         }
                     }
                 }

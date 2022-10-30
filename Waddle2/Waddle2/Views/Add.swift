@@ -17,9 +17,19 @@ struct Add: View {
     
     @StateObject var firestore = FirestoreManager()
     
-    
+    @State var added: Bool = false
     
     var body: some View {
+        
+        if added{
+            Memories()
+        }else{
+            content
+        }
+    }
+    
+    
+    var content: some View {
         
         
         NavigationView(){

@@ -1,35 +1,35 @@
 <!-- PROJECT LOGO -->
 <br />
 
-![GitHub repo size](https://img.shields.io/github/repo-size/isla-just/BigBucks?color=%23FE5A59)
-![GitHub watchers](https://img.shields.io/github/watchers/isla-just/BigBucks?color=%23F4B3DD)
-![GitHub language count](https://img.shields.io/github/languages/count/isla-just/BigBucks?color=%23445CC8)
-![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/isla-just/BigBucks?color=%23FDD024)
+![GitHub repo size](https://img.shields.io/github/repo-size/isla-just/Waddle?color=%23FECFBF)
+![GitHub watchers](https://img.shields.io/github/watchers/isla-just/Waddle?color=%23FFE598)
+![GitHub language count](https://img.shields.io/github/languages/count/isla-just/Waddle?color=%235F5AA9)
+![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/isla-just/Waddle?color=%23D7DFF2)
 [![LinkedIn][linkedin-shield]][linkedin-url]
 [![Instagram][instagram-shield]][instagram-url]
 
-<h6 align="center">Isla Just 200080 iOS 303</h6>
+<h6 align="center">Isla Just 200080 iOS 304</h6>
 <p align="center">
 </br>
    
    <p align="center">
-  <a href="https://github.com/isla-just/BigBucks ">
-    <img src="ReadMeImg/logo.png" alt="Logo" width="240" height="">
+  <a href="https://github.com/isla-just/Waddle ">
+    <img src="ReadMeImg/logo.png" alt="Logo" width="200" height="">
   </a>
   </p>
   
-  <h3 align="center">Big Bucks</h3>
+  <h3 align="center">Waddle</h3>
 
   <p align="center">
-    pocket money management for kids. Teaching children how to manage their money effectively<br>
-      <a href="https://github.com/isla-just/BigBucks"><strong>Explore the docs »</strong></a>
+    tracking life's most important moments with every stepy<br>
+      <a href="https://github.com/isla-just/Waddle"><strong>Explore the docs »</strong></a>
       <br />
       <br />
       <a href="ReadMeImg/IslaJust_200080_DV300_T1_demo.mp4">View Demo</a>
        ·
-       <a href="https://github.com/isla-just/BigBucks/issues">Report Bug</a>
+       <a href="https://github.com/isla-just/Waddle/issues">Report Bug</a>
        ·
-       <a href="https://github.com/isla-just/BigBucks/issues">Request Feature</a>
+       <a href="https://github.com/isla-just/Waddle/issues">Request Feature</a>
    </p>
 
 <!-- TABLE OF CONTENTS -->
@@ -71,13 +71,15 @@
 
 ### Project Description
 
-An iOS application that helps kids manage their monthly pocket money spending. Parents are able to set up their account with a parental pin and set their pocket money. Then kids can log the spending of their pocket money on the app and it is reflected on their Big Bucks card. They can even use the in-app calculator to see if they will have enough Big Bucks for their next purchase. This teaches kids how to manage their money effectively throughout the month - a very valuable skill
+An iOS application that helps parents document their child's every step by keeping track of memories in the form of photos. This app uses Healthkit to track the child's steps on their Apple Watch and visualises them on the app. 
 
 ### Built With
 
 * [XCode](https://developer.apple.com/xcode/)
 * [SwiftUI](https://developer.apple.com/xcode/swiftui/)
+* [Firebase](https://firebase.google.com/?gclid=Cj0KCQjwwfiaBhC7ARIsAGvcPe5DRjkUY2O7i9VPZ6dEwn8pTDhPKjj5RaNPlA5o3maWIhiyTrJbbsoaApU6EALw_wcB&gclsrc=aw.ds)
 
+![image2][image2]
 
 <!-- GETTING STARTED -->
 ## Getting Started
@@ -92,70 +94,55 @@ For development XCode is required which can be downloaded from [here](https://ap
  
 1. Clone the repo
 ```sh
-git clone https://github.com/isla-just/BigBucks.git
+git clone https://github.com/isla-just/Waddle.git
 ```
 2. Locate the file and open it in XCode
 
-3. Chose any simulator you'd like to use and press the play button to run the app
+3. Setup your firebase by creating a project in the console and following the installation instructions
+
+4. Add the following packages to your project 
+- concentric onboarding(https://github.com/exyte/ConcentricOnboarding.git)
+- SDWeb image (https://github.com/SDWebImage/SDWebImageSwiftUI.git)
+
+4. Chose any simulator you'd like to use and press the play button to run the app
 
 <!-- FEATURES AND FUNCTIONALITY-->
 ## Features and Functionality
 
 ### Features
 
-### Immersive onboarding experience
-
-![image2][image2]
-
-Interact with the liquid onboarding screens as you learn about the app
-
-### Login, Signup and account customisation
-
 ![image4][image4]
 
-Login to your account or create a new account and complete the parental setup to set pocket money amount and the parental pin
+### Immersive onboarding experience
+Interact with the concentric onboarding screens as you learn about the app
+
+### Login, Signup and account customisation
+Login to your account or create a new account. complete the watch setup and manage permissions surrounding camera usage and health app usage. 
 
 ### Dashboard page
+View a visualisation of the weekly step data as well as a list of the total steps taken. See a list of recent memories  
 
-![image3][image3]
-
-View your dynamic card balance and a list of your monthly spending   
-
-### Filter and search
-
-Filter and search through spending categories to refine results
+### Memories page
+Search through all of your family memories in this gallery of photos
 
 ### Detailed view
+Click on a memory to see details about it like the date, description and the amount of steps taken that day
 
-![image5][image5]
+### Add memory
+Add a memory quickly and easily by tapping to add the media and adding a short description of the memory
 
-See a detailed view of the spend details, date and notes
+### Authentication
+Keep your memories safe by unlocking the app using face ID every time you open it
 
-### In-app calculator
+### Apple watch app
+Your child can see an overview of the family memories when opening the app from their watch
 
-![image6][image6]
-
-See if you'll have enough big bucks for your next purchase with the in-app calculator
-
-### Settings page
-
-![image7][image7]
-
-View app and delevoper details
-
-### Appearances
-
-![image8][image8]
-
-Change to an alternative appearance where all the colours and imagery changes
-
-### Functionality
-
-* `Calculate` using the in app calculator
-* `Search and filter` spends within the application
-* View your `balance` on your digital card
-* Change the `appearance` of your app
-
+### Additional functionality
+* onboarding sequence animation
+* login and signup
+* account customisation screens 
+* adding memories and media
+* memory gallery
 
 <!-- CONCEPT PROCESS -->
 ## Concept Process
@@ -164,11 +151,11 @@ The `Conceptual Process` is the set of actions, activities and research that was
 
 ### Initial designs
 
-![image9][image9]
+![image7][image7]
 
 ### User-flow
 
-![image10][image10]
+![image3][image3]
 
 <!-- DEVELOPMENT PROCESS -->
 ## Development Process
@@ -178,42 +165,47 @@ The `Development Process` is the technical implementations and functionality don
 
 ### Implementation Process
 
-#### Onboarding sequence
-I started by setting up my project and my Github and then started following a tutorial I found on the liquid onboarding sequence
-
 #### Frontend development
-Then I focussed on implementing my designs using SwiftUI. I spent some time learning about layouts, grids and UI elements available on the platform
+I started this project by developing all of my frontend screens and making sure that I had the skeleton of the project so I could just add the backend
 
-#### Navigation
-After realising how simple it is to navigate to pages and understanding how Swift navigation bars and tabs work, I was able to implement them in my project.
+#### Onboarding sequence
+Next, I found a really nice concentric onboarding tutorial and followed along to create my animated onboarding sequence 
 
-#### Mapping and filtering
-Next, I focussed on how I was going to structure my data. I then mapped it on the frontend and implemented the searching and filtering functionality
+#### Fetching steps
+Next, I focussed on getting step data from the apple watch using Healthkit and visualising it nicely on the frontend
 
-#### App storage 
-Lastly, I did the settings page and set up the alternative appearance of my app. I implemented data storage for light mode and dark mode and on the onboarding screenality
+#### Firebase
+Then I installed the SDK to setup my firebase and started implementing the add memory functionality and started mapping it out on the frontend
+
+#### Authentication
+Next, I focussed on login and signing up using Firebase authentication. I also learnt how to use face ID to ensure that your memories are safe
+
+#### Apple Watch app
+I added some finishing touches to the frontend and implemented session storage and then focussed on my memory apple watch app
 
 ### Highlights
 
-* I really enjoyed how simple it is to create really beautiful frontends using SwiftUI. I also really enjoyed setting up the alternative appearance of my app and seeing everything come together. I also loved the concept ideation for this project
+* I really enjoyed being able to be creative with this concept and explore an interesting visual style. I really enjoyed that I was able to have such a string concept throughout this project and really enjoyed accessing step data with healthkit. I also really enjoyed implementing the widget
 
 #### Challenges
 
-* Initially I struggled with layouts and grids but after getting the hang of it it was super easy. I also struggled coming up with an initial idea that fit the brief but I am so happy with the one that I chose.
+* Time management was tricky this term due to the amount of stuff going on but I am pleased that I got everything done. I also struggled with mapping my firebase data on the frontend but it was a super simple fix when I eventually got it
 
 
 #### Future Implementation
 
-* Actually adding a new spend in the future
-* adding charts and graphs to visualise changes
-* a piggy bank feature to put money aside
+* Adding more charts and visualisations
+* Adding a widget
+* Adding more filters
+* Capturing locations
+
+![image6][image6]
 
 <!-- MOCKUPS -->
 ## Final Outcome
-
 ### Mockups
 
-![image11][image11]
+![image5][image5]
 
 <!-- VIDEO DEMONSTRATION -->
 ## Video Demonstration
@@ -232,7 +224,7 @@ To see the promotional video, click below:
 <!-- ROADMAP -->
 ## Roadmap
 
-See the [open issues](https://github.com/isla-just/BigBucks/issues) for a list of proposed features (and known issues).
+See the [open issues](https://github.com/isla-just/Waddle/issues) for a list of proposed features (and known issues).
 
 <!-- CONTRIBUTING -->
 ## Contributing
@@ -259,16 +251,17 @@ Distributed under the MIT License. See `LICENSE` for more information.\
 ## Contact
 
 * **Isla Just** - [@byislajust](https://www.instagram.com/byislajust/) - isla@just.co.za
-* **Project Link** - https://github.com/isla-just/BigBucks
+* **Project Link** - https://github.com/isla-just/Waddle
 
 <!-- ACKNOWLEDGEMENTS -->
 ## Acknowledgements
 
 * [Kavsoft Swift tutorials](https://www.youtube.com/c/Kavsoft)
-* [CodeWithChris](https://www.youtube.com/c/CodeWithChris)
-* [Liquid swipe tutorial 1](https://iosexample.com/animated-ios-app-onboarding-screens-with-liquid-swipe-animation-using-swiftui/)
-* [Liquid swipe tutorial 2](https://www.youtube.com/watch?v=BQrrNpgDbEg)
-* [Calculator tutorial](https://www.youtube.com/watch?v=uWNP1WM9zHA)
+* [Onboarding tutorial](https://www.youtube.com/watch?v=z1GtiOu9h3o)
+* [Healthkit tutorial](https://www.youtube.com/watch?v=ohgrzM9gfvM)
+* [Healthkit tutorial 2](https://www.youtube.com/watch?v=AJV6a3prckY)
+* [Firebase documentation]()
+* [Web Image](https://github.com/SDWebImage/SDWebImageSwiftUI)
 
 mockups:
 * https://originalmockups.com/mockups/free-mockups

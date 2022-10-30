@@ -11,13 +11,11 @@
 		040135A42900746F00935CF0 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040135A32900746F00935CF0 /* ContentView.swift */; };
 		040135A62900747000935CF0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 040135A52900747000935CF0 /* Assets.xcassets */; };
 		040135AA2900747000935CF0 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 040135A92900747000935CF0 /* Preview Assets.xcassets */; };
-		040135B1290074A300935CF0 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 040135B0290074A300935CF0 /* Launch Screen.storyboard */; };
 		040135BB290077E500935CF0 /* ConcentricOnboarding in Frameworks */ = {isa = PBXBuildFile; productRef = 040135BA290077E500935CF0 /* ConcentricOnboarding */; };
 		040135C12900793400935CF0 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 040135C02900793400935CF0 /* FirebaseAuth */; };
 		040135C32900793400935CF0 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 040135C22900793400935CF0 /* FirebaseFirestore */; };
 		040135C52900793400935CF0 /* FirebaseFirestoreSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 040135C42900793400935CF0 /* FirebaseFirestoreSwift */; };
 		040135C829007AD000935CF0 /* PageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040135C629007AD000935CF0 /* PageView.swift */; };
-		040135C929007AD000935CF0 /* MockData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040135C729007AD000935CF0 /* MockData.swift */; };
 		040135CB29007B7B00935CF0 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 040135CA29007B7B00935CF0 /* GoogleService-Info.plist */; };
 		042A55F7290A97860053CA32 /* GraphView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 042A55F6290A97860053CA32 /* GraphView.swift */; };
 		04359A05290A6C690093C1D6 /* SDWebImageSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = 04359A04290A6C690093C1D6 /* SDWebImageSwiftUI */; };
@@ -37,7 +35,30 @@
 		04C605B129007E1C005F5B77 /* WatchLink.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C605B029007E1C005F5B77 /* WatchLink.swift */; };
 		04C605B329007E65005F5B77 /* HealthStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C605B229007E65005F5B77 /* HealthStore.swift */; };
 		04C605B729008767005F5B77 /* Step.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C605B629008767005F5B77 /* Step.swift */; };
+		04CCAB37290D69A600BFC561 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CCAB36290D69A600BFC561 /* OnboardingView.swift */; };
+		04CCAB8F290EA18900BFC561 /* WaddleWatchApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CCAB8E290EA18900BFC561 /* WaddleWatchApp.swift */; };
+		04CCAB91290EA18900BFC561 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CCAB90290EA18900BFC561 /* ContentView.swift */; };
+		04CCAB93290EA18A00BFC561 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04CCAB92290EA18A00BFC561 /* Assets.xcassets */; };
+		04CCAB96290EA18A00BFC561 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04CCAB95290EA18A00BFC561 /* Preview Assets.xcassets */; };
+		04CCAB9A290EA7ED00BFC561 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 040135A52900747000935CF0 /* Assets.xcassets */; };
+		04CCAB9C290EA84800BFC561 /* SDWebImageSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = 04CCAB9B290EA84800BFC561 /* SDWebImageSwiftUI */; };
+		04CCAB9D290EA86D00BFC561 /* FirestoreManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0476F584290150590055E7BB /* FirestoreManager.swift */; };
+		04CCAB9F290EB11000BFC561 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04CCAB9E290EB11000BFC561 /* Launch Screen.storyboard */; };
+		04CCABA1290EB12100BFC561 /* MockData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CCABA0290EB12100BFC561 /* MockData.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		04CCAB62290E7D3500BFC561 /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		0401359E2900746F00935CF0 /* Waddle2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Waddle2.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -46,9 +67,7 @@
 		040135A52900747000935CF0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		040135A72900747000935CF0 /* Waddle2.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Waddle2.entitlements; sourceTree = "<group>"; };
 		040135A92900747000935CF0 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		040135B0290074A300935CF0 /* Launch Screen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = "Launch Screen.storyboard"; path = "../Waddle/Launch Screen.storyboard"; sourceTree = "<group>"; };
-		040135C629007AD000935CF0 /* PageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PageView.swift; path = ../../Waddle/Waddle/PageView.swift; sourceTree = "<group>"; };
-		040135C729007AD000935CF0 /* MockData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MockData.swift; path = ../../Waddle/Waddle/MockData.swift; sourceTree = "<group>"; };
+		040135C629007AD000935CF0 /* PageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PageView.swift; sourceTree = "<group>"; };
 		040135CA29007B7B00935CF0 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../../Desktop/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		042A55F6290A97860053CA32 /* GraphView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraphView.swift; sourceTree = "<group>"; };
 		046D90562901584400707636 /* AuthManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthManager.swift; sourceTree = "<group>"; };
@@ -67,6 +86,17 @@
 		04C605B229007E65005F5B77 /* HealthStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthStore.swift; sourceTree = "<group>"; };
 		04C605B429008040005F5B77 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		04C605B629008767005F5B77 /* Step.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Step.swift; sourceTree = "<group>"; };
+		04CCAB36290D69A600BFC561 /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
+		04CCAB3D290D829C00BFC561 /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
+		04CCAB3F290D829C00BFC561 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
+		04CCAB7E290E853E00BFC561 /* MemoryWidgetExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = MemoryWidgetExtension.entitlements; sourceTree = "<group>"; };
+		04CCAB8C290EA18900BFC561 /* WaddleWatch Watch App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "WaddleWatch Watch App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		04CCAB8E290EA18900BFC561 /* WaddleWatchApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaddleWatchApp.swift; sourceTree = "<group>"; };
+		04CCAB90290EA18900BFC561 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		04CCAB92290EA18A00BFC561 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		04CCAB95290EA18A00BFC561 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		04CCAB9E290EB11000BFC561 /* Launch Screen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = "Launch Screen.storyboard"; path = "../../../../.Trash/Waddle/Launch Screen.storyboard"; sourceTree = "<group>"; };
+		04CCABA0290EB12100BFC561 /* MockData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MockData.swift; path = ../../../../../.Trash/Waddle/Waddle/MockData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,14 +113,24 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		04CCAB89290EA18900BFC561 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				04CCAB9C290EA84800BFC561 /* SDWebImageSwiftUI in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
 		040135952900746F00935CF0 = {
 			isa = PBXGroup;
 			children = (
-				040135B0290074A300935CF0 /* Launch Screen.storyboard */,
+				04CCAB7E290E853E00BFC561 /* MemoryWidgetExtension.entitlements */,
+				04CCAB9E290EB11000BFC561 /* Launch Screen.storyboard */,
 				040135A02900746F00935CF0 /* Waddle2 */,
+				04CCAB8D290EA18900BFC561 /* WaddleWatch Watch App */,
 				0401359F2900746F00935CF0 /* Products */,
 				04359A06290A6D120093C1D6 /* Frameworks */,
 			);
@@ -100,6 +140,7 @@
 			isa = PBXGroup;
 			children = (
 				0401359E2900746F00935CF0 /* Waddle2.app */,
+				04CCAB8C290EA18900BFC561 /* WaddleWatch Watch App.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -114,8 +155,7 @@
 				040135B4290075FD00935CF0 /* Services */,
 				040135A12900746F00935CF0 /* Waddle2App.swift */,
 				040135A32900746F00935CF0 /* ContentView.swift */,
-				040135C729007AD000935CF0 /* MockData.swift */,
-				040135C629007AD000935CF0 /* PageView.swift */,
+				04CCABA0290EB12100BFC561 /* MockData.swift */,
 				040135A52900747000935CF0 /* Assets.xcassets */,
 				040135A72900747000935CF0 /* Waddle2.entitlements */,
 				040135A82900747000935CF0 /* Preview Content */,
@@ -144,6 +184,8 @@
 		04359A06290A6D120093C1D6 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				04CCAB3D290D829C00BFC561 /* WidgetKit.framework */,
+				04CCAB3F290D829C00BFC561 /* SwiftUI.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -162,6 +204,8 @@
 				04C605B029007E1C005F5B77 /* WatchLink.swift */,
 				046D905829015E0500707636 /* BioAuthView.swift */,
 				042A55F6290A97860053CA32 /* GraphView.swift */,
+				040135C629007AD000935CF0 /* PageView.swift */,
+				04CCAB36290D69A600BFC561 /* OnboardingView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -175,6 +219,25 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
+		04CCAB8D290EA18900BFC561 /* WaddleWatch Watch App */ = {
+			isa = PBXGroup;
+			children = (
+				04CCAB8E290EA18900BFC561 /* WaddleWatchApp.swift */,
+				04CCAB90290EA18900BFC561 /* ContentView.swift */,
+				04CCAB92290EA18A00BFC561 /* Assets.xcassets */,
+				04CCAB94290EA18A00BFC561 /* Preview Content */,
+			);
+			path = "WaddleWatch Watch App";
+			sourceTree = "<group>";
+		};
+		04CCAB94290EA18A00BFC561 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				04CCAB95290EA18A00BFC561 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -185,6 +248,7 @@
 				0401359A2900746F00935CF0 /* Sources */,
 				0401359B2900746F00935CF0 /* Frameworks */,
 				0401359C2900746F00935CF0 /* Resources */,
+				04CCAB62290E7D3500BFC561 /* Embed Foundation Extensions */,
 			);
 			buildRules = (
 			);
@@ -203,6 +267,26 @@
 			productReference = 0401359E2900746F00935CF0 /* Waddle2.app */;
 			productType = "com.apple.product-type.application";
 		};
+		04CCAB8B290EA18900BFC561 /* WaddleWatch Watch App */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 04CCAB97290EA18A00BFC561 /* Build configuration list for PBXNativeTarget "WaddleWatch Watch App" */;
+			buildPhases = (
+				04CCAB88290EA18900BFC561 /* Sources */,
+				04CCAB89290EA18900BFC561 /* Frameworks */,
+				04CCAB8A290EA18900BFC561 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "WaddleWatch Watch App";
+			packageProductDependencies = (
+				04CCAB9B290EA84800BFC561 /* SDWebImageSwiftUI */,
+			);
+			productName = "WaddleWatch Watch App";
+			productReference = 04CCAB8C290EA18900BFC561 /* WaddleWatch Watch App.app */;
+			productType = "com.apple.product-type.application";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -214,6 +298,9 @@
 				LastUpgradeCheck = 1400;
 				TargetAttributes = {
 					0401359D2900746F00935CF0 = {
+						CreatedOnToolsVersion = 14.0.1;
+					};
+					04CCAB8B290EA18900BFC561 = {
 						CreatedOnToolsVersion = 14.0.1;
 					};
 				};
@@ -237,6 +324,7 @@
 			projectRoot = "";
 			targets = (
 				0401359D2900746F00935CF0 /* Waddle2 */,
+				04CCAB8B290EA18900BFC561 /* WaddleWatch Watch App */,
 			);
 		};
 /* End PBXProject section */
@@ -246,10 +334,20 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				040135B1290074A300935CF0 /* Launch Screen.storyboard in Resources */,
 				040135AA2900747000935CF0 /* Preview Assets.xcassets in Resources */,
 				040135A62900747000935CF0 /* Assets.xcassets in Resources */,
+				04CCAB9F290EB11000BFC561 /* Launch Screen.storyboard in Resources */,
 				040135CB29007B7B00935CF0 /* GoogleService-Info.plist in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		04CCAB8A290EA18900BFC561 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				04CCAB96290EA18A00BFC561 /* Preview Assets.xcassets in Resources */,
+				04CCAB9A290EA7ED00BFC561 /* Assets.xcassets in Resources */,
+				04CCAB93290EA18A00BFC561 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -266,8 +364,9 @@
 				04C605B729008767005F5B77 /* Step.swift in Sources */,
 				04C605B129007E1C005F5B77 /* WatchLink.swift in Sources */,
 				04C605A729007DA3005F5B77 /* Login.swift in Sources */,
-				040135C929007AD000935CF0 /* MockData.swift in Sources */,
+				04CCAB37290D69A600BFC561 /* OnboardingView.swift in Sources */,
 				04C605A329007D57005F5B77 /* Dashboard.swift in Sources */,
+				04CCABA1290EB12100BFC561 /* MockData.swift in Sources */,
 				0476F585290150590055E7BB /* FirestoreManager.swift in Sources */,
 				04C605A529007D8D005F5B77 /* ImagePicker.swift in Sources */,
 				046D905929015E0500707636 /* BioAuthView.swift in Sources */,
@@ -280,6 +379,16 @@
 				04C605AD29007DED005F5B77 /* Setup.swift in Sources */,
 				040135A22900746F00935CF0 /* Waddle2App.swift in Sources */,
 				04C605B329007E65005F5B77 /* HealthStore.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		04CCAB88290EA18900BFC561 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				04CCAB91290EA18900BFC561 /* ContentView.swift in Sources */,
+				04CCAB9D290EA86D00BFC561 /* FirestoreManager.swift in Sources */,
+				04CCAB8F290EA18900BFC561 /* WaddleWatchApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -398,6 +507,7 @@
 		040135AE2900747000935CF0 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = Waddle2/Waddle2.entitlements;
@@ -440,6 +550,7 @@
 		040135AF2900747000935CF0 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = Waddle2/Waddle2.entitlements;
@@ -479,6 +590,67 @@
 			};
 			name = Release;
 		};
+		04CCAB98290EA18A00BFC561 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"WaddleWatch Watch App/Preview Content\"";
+				DEVELOPMENT_TEAM = GV58N5RQL6;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = WaddleWatch;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = .watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 9.0;
+			};
+			name = Debug;
+		};
+		04CCAB99290EA18A00BFC561 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"WaddleWatch Watch App/Preview Content\"";
+				DEVELOPMENT_TEAM = GV58N5RQL6;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = WaddleWatch;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = .watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				VALIDATE_PRODUCT = YES;
+				WATCHOS_DEPLOYMENT_TARGET = 9.0;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -496,6 +668,15 @@
 			buildConfigurations = (
 				040135AE2900747000935CF0 /* Debug */,
 				040135AF2900747000935CF0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		04CCAB97290EA18A00BFC561 /* Build configuration list for PBXNativeTarget "WaddleWatch Watch App" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				04CCAB98290EA18A00BFC561 /* Debug */,
+				04CCAB99290EA18A00BFC561 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -559,6 +740,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 040135BF2900793400935CF0 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = FirebaseStorage;
+		};
+		04CCAB9B290EA84800BFC561 /* SDWebImageSwiftUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 04359A03290A6C690093C1D6 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */;
+			productName = SDWebImageSwiftUI;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

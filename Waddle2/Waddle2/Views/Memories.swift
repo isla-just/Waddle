@@ -62,7 +62,7 @@ struct Memories: View {
                             TextField("Search memories", text: $isSearchText)
                                 .background(Color.red.opacity(0))
                                 .cornerRadius(5)
-                                .padding(.horizontal, 10).padding(.top, 20) .accentColor(Color("Accent"))
+                                .padding(.horizontal, 10).padding(.top, 20) .accentColor(Color("Dark2"))
                                 .font(.system(size: 18, weight: .regular)).foregroundColor(Color("Dark"))
                         }
                         
@@ -129,9 +129,12 @@ struct Memories: View {
                         
                         WebImage(url: URL(string: memory.img))
                             .resizable()
-                            .cornerRadius(20)
                             .frame(width: 160, height: 150)
                             .aspectRatio(contentMode: .fill)
+            
+                            .cornerRadius(20)
+                 
+                          
                         
                         Text("\(memory.date,formatter:Self.dateFormatter)")
                            .font(.system(size: 15, weight: .medium))
@@ -156,7 +159,7 @@ struct Memories: View {
                                                 }//foreach
                         //
                                                 }.padding(.leading, -20).padding(.top, 20)//lazygrid
-                    }
+                    }.padding(.bottom, 80)
 
                 
                 ZStack{

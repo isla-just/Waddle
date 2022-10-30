@@ -10,7 +10,10 @@ import HealthKit
 import SDWebImageSwiftUI
 
 
+
 struct Dashboard: View {
+    
+    @AppStorage("userIsLoggedIn") var userIsLoggedIn: Bool = true
     
     private var healthStore: HealthStore?
     @State private var steps: [Step] = [Step]()
@@ -49,6 +52,15 @@ struct Dashboard: View {
     }
     
     var body: some View {
+        
+        if userIsLoggedIn==false{
+           Login()
+        }else{
+            content
+        }
+    }
+    
+    var content: some View {
         
             
             
@@ -130,10 +142,11 @@ struct Dashboard: View {
                                                                                     ).padding(.bottom, 5)
                                    
                                    WebImage(url: URL(string: memory.img))
+                        
                                        .resizable()
-                                       .cornerRadius(20)
                                        .frame(width: 140, height: 150)
                                        .aspectRatio(contentMode: .fill)
+                                       .cornerRadius(20)
                                    
                                    Text("\(memory.date,formatter:Self.dateFormatter)")
                                       .font(.system(size: 15, weight: .medium))
@@ -160,8 +173,8 @@ struct Dashboard: View {
                                                            }.padding(.leading, -30).padding(.top, 20)//lazygrid
                                
 
-                    NavigationLink(destination: BioAuthView()){
 
+                    NavigationLink(destination: BioAuthView()){
                         ZStack{
                             RoundedRectangle(cornerRadius: 25, style: .continuous)
                                 .fill(Color("Dark"))
@@ -173,8 +186,13 @@ struct Dashboard: View {
                                 .multilineTextAlignment(.center).foregroundColor(.white)
                                 .padding(.horizontal, 50).padding(.top, 20)
                         }.padding(.bottom, 120)
-
+                        .onTapGesture{
+                            userIsLoggedIn.toggle()
+                         }//nav link
+                        
                     }
+
+                
 
 
                 }

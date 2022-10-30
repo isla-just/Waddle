@@ -63,7 +63,7 @@ struct BioAuthView: View {
                         .frame(width: 420, height: 300).padding(.top, -10)
                 
                     
-                    Text(isUnlocked ? "Need authentication" : "Is logged in")
+                    //Text(isUnlocked ? "Need authentication" : "Is logged in")
                     
                     Text("We are keeping your memories safe!")
                         .font(.system(size: 30, weight: .medium, design: .rounded))
